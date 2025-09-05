@@ -28,7 +28,6 @@ import com.idormy.sms.forwarder.databinding.ActivityMainBinding
 import com.idormy.sms.forwarder.fragment.AboutFragment
 import com.idormy.sms.forwarder.fragment.AppListFragment
 import com.idormy.sms.forwarder.fragment.ClientFragment
-import com.idormy.sms.forwarder.fragment.FrpcFragment
 import com.idormy.sms.forwarder.fragment.LogsFragment
 import com.idormy.sms.forwarder.fragment.RulesFragment
 import com.idormy.sms.forwarder.fragment.SendersFragment
