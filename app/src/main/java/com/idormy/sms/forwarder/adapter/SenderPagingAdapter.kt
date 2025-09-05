@@ -32,6 +32,9 @@ class SenderPagingAdapter(private val itemClickListener: OnItemClickListener) : 
             holder.binding.ivEdit.setOnClickListener { view: View? ->
                 itemClickListener.onItemClicked(view, item)
             }
+            holder.binding.ivExport.setOnClickListener { view: View? ->
+                itemClickListener.onItemClicked(view, item)
+            }
             holder.binding.ivDelete.setOnClickListener { view: View? ->
                 itemClickListener.onItemClicked(view, item)
             }

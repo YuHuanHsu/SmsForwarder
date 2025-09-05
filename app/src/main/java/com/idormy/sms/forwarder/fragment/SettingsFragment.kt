@@ -51,6 +51,7 @@ import com.idormy.sms.forwarder.utils.ACTION_START
 import com.idormy.sms.forwarder.utils.ACTION_STOP
 import com.idormy.sms.forwarder.utils.ACTION_UPDATE_NOTIFICATION
 import com.idormy.sms.forwarder.utils.AppUtils.getAppPackageName
+import com.idormy.sms.forwarder.utils.BackupUtils
 import com.idormy.sms.forwarder.utils.BluetoothUtils
 import com.idormy.sms.forwarder.utils.CommonUtils
 import com.idormy.sms.forwarder.utils.DataProvider
@@ -80,6 +81,9 @@ import com.xuexiang.xui.widget.picker.widget.listener.OnOptionsSelectListener
 import com.xuexiang.xutil.XUtil
 import com.xuexiang.xutil.XUtil.getPackageManager
 import com.xuexiang.xutil.file.FileUtils
+import java.io.File
+import java.text.SimpleDateFormat
+import java.util.Date
 import java.util.Locale
 
 @Suppress("SpellCheckingInspection", "PrivatePropertyName")
@@ -222,6 +226,8 @@ class SettingsFragment : BaseFragment<FragmentSettingsBinding?>(), View.OnClickL
         binding!!.btnExtraSim1.setOnClickListener(this)
         binding!!.btnExtraSim2.setOnClickListener(this)
         binding!!.btnExportLog.setOnClickListener(this)
+        binding!!.btnExportSettings.setOnClickListener(this)
+        binding!!.btnImportSettings.setOnClickListener(this)
 
         //监听已安装App信息列表加载完成事件
         LiveEventBus.get(EVENT_LOAD_APP_LIST, String::class.java).observeStickyForever(appListObserver)
@@ -323,6 +329,46 @@ class SettingsFragment : BaseFragment<FragmentSettingsBinding?>(), View.OnClickL
                             if (never) {
                                 XToastUtils.error(R.string.toast_denied_never)
                                 // 如果是被永久拒绝就跳转到应用权限系统设置页面
+                                XXPermissions.startPermissionActivity(requireContext(), permissions)
+                            } else {
+                                XToastUtils.error(R.string.toast_denied)
+                            }
+                        }
+                    })
+                return
+            }
+
+            R.id.btn_export_settings -> {
+                XXPermissions.with(this)
+                    .permission(Permission.MANAGE_EXTERNAL_STORAGE)
+                    .request(object : OnPermissionCallback {
+                        override fun onGranted(permissions: List<String>, all: Boolean) {
+                            showExportCategoryDialog()
+                        }
+
+                        override fun onDenied(permissions: List<String>, never: Boolean) {
+                            if (never) {
+                                XToastUtils.error(R.string.toast_denied_never)
+                                XXPermissions.startPermissionActivity(requireContext(), permissions)
+                            } else {
+                                XToastUtils.error(R.string.toast_denied)
+                            }
+                        }
+                    })
+                return
+            }
+
+            R.id.btn_import_settings -> {
+                XXPermissions.with(this)
+                    .permission(Permission.MANAGE_EXTERNAL_STORAGE)
+                    .request(object : OnPermissionCallback {
+                        override fun onGranted(permissions: List<String>, all: Boolean) {
+                            showImportFileDialog()
+                        }
+
+                        override fun onDenied(permissions: List<String>, never: Boolean) {
+                            if (never) {
+                                XToastUtils.error(R.string.toast_denied_never)
                                 XXPermissions.startPermissionActivity(requireContext(), permissions)
                             } else {
                                 XToastUtils.error(R.string.toast_denied)
@@ -1391,6 +1437,170 @@ class SettingsFragment : BaseFragment<FragmentSettingsBinding?>(), View.OnClickL
         }
         binding!!.layoutSpApp.visibility = View.VISIBLE
 
+    }
+
+    //顯示分類匯出對話框
+    private fun showExportCategoryDialog() {
+        val categories = arrayOf(
+            getString(R.string.backup_all_settings),
+            getString(R.string.backup_app_settings),
+            getString(R.string.backup_senders),
+            getString(R.string.backup_rules),
+            getString(R.string.backup_tasks)
+        )
+        
+        val categoryTypes = arrayOf("all", "settings", "senders", "rules", "tasks")
+
+        MaterialDialog.Builder(requireContext())
+            .title(getString(R.string.select_backup_category))
+            .items(*categories)
+            .itemsCallback { _, _, which, _ ->
+                val categoryType = categoryTypes[which]
+                val categoryName = categories[which]
+                exportCategorySettings(categoryType, categoryName)
+            }
+            .negativeText(android.R.string.cancel)
+            .show()
+    }
+    
+    //執行分類匯出
+    private fun exportCategorySettings(categoryType: String, categoryName: String) {
+        try {
+            val backupPath = if (categoryType == "all") {
+                BackupUtils.exportSettings(requireContext())
+            } else {
+                BackupUtils.exportCategorySettings(requireContext(), categoryType, categoryName)
+            }
+            
+            if (backupPath != null) {
+                XToastUtils.success(getString(R.string.category_export_success, categoryName, backupPath))
+            } else {
+                XToastUtils.error(getString(R.string.category_export_failed, categoryName))
+            }
+        } catch (e: Exception) {
+            XToastUtils.error(getString(R.string.category_export_failed, categoryName) + ": " + e.message)
+            e.printStackTrace()
+        }
+    }
+
+    //顯示匯入檔案對話框
+    private fun showImportFileDialog() {
+        try {
+            val backupFiles = BackupUtils.listAllBackupFiles()
+            if (backupFiles.isEmpty()) {
+                XToastUtils.warning(getString(R.string.backup_file_not_found))
+                return
+            }
+
+            val fileInfos = backupFiles.map { file ->
+                getFileDisplayInfo(file)
+            }.toTypedArray()
+
+            MaterialDialog.Builder(requireContext())
+                .title(getString(R.string.select_import_file))
+                .items(*fileInfos)
+                .itemsCallback { _, _, which, _ ->
+                    val selectedFile = backupFiles[which]
+                    showImportConfirmDialog(selectedFile.absolutePath)
+                }
+                .negativeText(android.R.string.cancel)
+                .show()
+
+        } catch (e: Exception) {
+            XToastUtils.error(getString(R.string.backup_import_failed, e.message))
+            e.printStackTrace()
+        }
+    }
+    
+    //取得檔案顯示資訊
+    private fun getFileDisplayInfo(file: File): String {
+        return try {
+            val fileName = file.name
+            val fileDate = SimpleDateFormat("MM-dd HH:mm", Locale.getDefault()).format(Date(file.lastModified()))
+            
+            // 嘗試解析檔案類型
+            val fileType = when {
+                fileName.contains("_all_") -> "完整備份"
+                fileName.contains("_settings_") -> "應用設定" 
+                fileName.contains("_senders_") -> "發送通道"
+                fileName.contains("_rules_") -> "轉發規則"
+                fileName.contains("_tasks_") -> "自動任務"
+                fileName.contains("_sender_") -> "單一發送通道"
+                fileName.contains("_rule_") -> "單一轉發規則"
+                fileName.contains("_task_") -> "單一自動任務"
+                fileName.endsWith(".smsf") -> "備份檔案"
+                fileName.endsWith(".json") -> "JSON檔案"
+                else -> "未知類型"
+            }
+            
+            "[$fileType] $fileDate - ${fileName.take(30)}${if (fileName.length > 30) "..." else ""}"
+        } catch (e: Exception) {
+            file.name
+        }
+    }
+
+    //顯示匯入確認對話框
+    private fun showImportConfirmDialog(filePath: String) {
+        MaterialDialog.Builder(requireContext())
+            .title(getString(R.string.import_settings))
+            .content(getString(R.string.backup_confirm_import))
+            .positiveText(getString(R.string.import_action))
+            .negativeText(android.R.string.cancel)
+            .onPositive { _, _ ->
+                importSettings(filePath)
+            }
+            .show()
+    }
+
+    //執行匯入設定
+    private fun importSettings(filePath: String) {
+        try {
+            val file = File(filePath)
+            val success = if (file.name.endsWith(".json")) {
+                // 單一設定匯入
+                BackupUtils.importSingleSetting(filePath)
+            } else if (file.name.endsWith(".smsf")) {
+                // 判斷是否為分類備份
+                if (isLegacyBackupFile(filePath)) {
+                    // 舊版完整備份格式
+                    BackupUtils.importSettings(filePath)
+                } else {
+                    // 新版分類備份格式
+                    BackupUtils.importCategorySettings(filePath)
+                }
+            } else {
+                // 嘗試舊版格式
+                BackupUtils.importSettings(filePath)
+            }
+            
+            if (success) {
+                XToastUtils.success(getString(R.string.backup_import_success))
+                // 重新整理界面
+                requireActivity().recreate()
+            } else {
+                XToastUtils.error(getString(R.string.backup_import_failed, getString(R.string.backup_invalid_file)))
+            }
+        } catch (e: Exception) {
+            XToastUtils.error(getString(R.string.backup_import_failed, e.message))
+            e.printStackTrace()
+        }
+    }
+    
+    //檢查是否為舊版備份檔案
+    private fun isLegacyBackupFile(filePath: String): Boolean {
+        return try {
+            val jsonString = com.xuexiang.xutil.file.FileIOUtils.readFile2String(File(filePath))
+            if (jsonString.isNullOrEmpty()) return false
+            
+            // 嘗試解析為舊版 CloneInfo 格式
+            val gson = com.google.gson.Gson()
+            val cloneInfo = gson.fromJson(jsonString, com.idormy.sms.forwarder.entity.CloneInfo::class.java)
+            
+            // 如果包含 backup_type 字段，則為新版格式
+            jsonString.contains("\"backup_type\"").not() && cloneInfo != null
+        } catch (e: Exception) {
+            true // 解析失敗時當作舊版格式處理
+        }
     }
 
 }

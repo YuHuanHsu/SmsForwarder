@@ -1233,4 +1233,52 @@
     <string name="start_discovery">搜索设备</string>
     <string name="invalid_bluetooth_mac_address">蓝牙设备MAC地址无效，例如：AA:BB:CC:DD:EE:FF</string>
     <string name="auto_start_redmi"><![CDATA[红米手机：授权管理 -> 自启动管理 -> 允许应用自启动]]></string>
+
+    <!-- 備份還原功能 -->
+    <string name="backup_restore">備份還原</string>
+    <string name="backup_restore_tips">匯出設定到檔案或從檔案還原設定</string>
+    <string name="export_settings">匯出設定</string>
+    <string name="import_settings">匯入設定</string>
+    <string name="import_action">匯入</string>
+    <string name="backup_export_success">設定已成功匯出到：%s</string>
+    <string name="backup_export_failed">設定匯出失敗</string>
+    <string name="backup_import_success">設定已成功匯入</string>
+    <string name="backup_import_failed">設定匯入失敗：%s</string>
+    <string name="backup_select_file">請選擇備份檔案</string>
+    <string name="backup_file_not_found">找不到備份檔案</string>
+    <string name="backup_invalid_file">無效的備份檔案</string>
+    <string name="backup_confirm_import">匯入設定會覆蓋當前所有設定，是否繼續？</string>
+    
+    <!-- 分類備份功能 -->
+    <string name="category_backup">分類備份</string>
+    <string name="category_backup_tips">選擇備份類別或完整備份</string>
+    <string name="backup_all_settings">完整備份</string>
+    <string name="backup_app_settings">應用設定</string>
+    <string name="backup_senders">發送通道</string>
+    <string name="backup_rules">轉發規則</string>
+    <string name="backup_tasks">自動任務</string>
+    <string name="select_backup_category">選擇備份類別</string>
+    <string name="select_import_file">選擇匯入檔案</string>
+    <string name="category_export_success" formatted="false">%s已成功匯出到：%s</string>
+    <string name="category_export_failed">%s匯出失敗</string>
+    <string name="category_import_success">%s已成功匯入</string>
+    <string name="category_import_failed" formatted="false">%s匯入失敗：%s</string>
+    <string name="backup_confirm_category_import" formatted="false">匯入%s會覆蓋當前的%s設定，是否繼續？</string>
+    
+    <!-- 單一設定匯出功能 -->
+    <string name="export_single_sender">匯出發送通道</string>
+    <string name="export_single_rule">匯出轉發規則</string>
+    <string name="export_single_task">匯出自動任務</string>
+    <string name="single_export_success" formatted="false">%s「%s」已成功匯出到：%s</string>
+    <string name="single_export_failed">%s匯出失敗</string>
+    <string name="single_import_success" formatted="false">%s「%s」已成功匯入</string>
+    <string name="single_import_failed" formatted="false">%s匯入失敗：%s</string>
+    <string name="backup_confirm_single_import" formatted="false">匯入%s「%s」，是否繼續？</string>
+    
+    <!-- 檔案類型說明 -->
+    <string name="backup_file_info">備份檔案資訊</string>
+    <string name="backup_file_type">類型：%s</string>
+    <string name="backup_file_time">時間：%s</string>
+    <string name="backup_file_description">說明：%s</string>
+    <string name="backup_file_version">版本：%s</string>
 </resources>

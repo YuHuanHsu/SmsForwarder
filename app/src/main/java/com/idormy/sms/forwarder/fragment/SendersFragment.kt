@@ -55,7 +55,11 @@ import com.idormy.sms.forwarder.utils.TYPE_URL_SCHEME
 import com.idormy.sms.forwarder.utils.TYPE_WEBHOOK
 import com.idormy.sms.forwarder.utils.TYPE_WEWORK_AGENT
 import com.idormy.sms.forwarder.utils.TYPE_WEWORK_ROBOT
+import com.idormy.sms.forwarder.utils.BackupUtils
 import com.idormy.sms.forwarder.utils.XToastUtils
+import com.hjq.permissions.OnPermissionCallback
+import com.hjq.permissions.Permission
+import com.hjq.permissions.XXPermissions
 import com.scwang.smartrefresh.layout.api.RefreshLayout
 import com.xuexiang.xaop.annotation.SingleClick
 import com.xuexiang.xpage.annotation.Page
@@ -301,6 +305,25 @@ class SendersFragment : BaseFragment<FragmentSendersBinding?>(),
                     .open(this)
             }
 
+            R.id.iv_export -> {
+                XXPermissions.with(this)
+                    .permission(Permission.MANAGE_EXTERNAL_STORAGE)
+                    .request(object : OnPermissionCallback {
+                        override fun onGranted(permissions: List<String>, all: Boolean) {
+                            exportSingleSender(item)
+                        }
+                        
+                        override fun onDenied(permissions: List<String>, never: Boolean) {
+                            if (never) {
+                                XToastUtils.error(R.string.toast_denied_never)
+                                XXPermissions.startPermissionActivity(requireContext(), permissions)
+                            } else {
+                                XToastUtils.error(R.string.toast_denied)
+                            }
+                        }
+                    })
+            }
+
             R.id.iv_delete -> {
                 MaterialDialog.Builder(requireContext())
                     .title(R.string.delete_sender_title)
@@ -355,6 +378,21 @@ class SendersFragment : BaseFragment<FragmentSendersBinding?>(),
             TYPE_URL_SCHEME -> UrlSchemeFragment::class.java
             TYPE_SOCKET -> SocketFragment::class.java
             else -> DingtalkGroupRobotFragment::class.java
+        }
+    }
+    
+    //匯出單一發送通道
+    private fun exportSingleSender(sender: Sender) {
+        try {
+            val backupPath = BackupUtils.exportSingleSender(requireContext(), sender)
+            if (backupPath != null) {
+                XToastUtils.success(getString(R.string.single_export_success, "發送通道", sender.name, backupPath))
+            } else {
+                XToastUtils.error(getString(R.string.single_export_failed, "發送通道"))
+            }
+        } catch (e: Exception) {
+            XToastUtils.error(getString(R.string.single_export_failed, "發送通道") + ": " + e.message)
+            e.printStackTrace()
         }
     }
 

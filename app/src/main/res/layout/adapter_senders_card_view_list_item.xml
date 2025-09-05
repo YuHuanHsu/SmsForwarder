@@ -75,6 +75,16 @@
             tools:ignore="ContentDescription,PrivateResource,ImageContrastCheck" />
 
         <ImageView
+            android:id="@+id/iv_export"
+            android:layout_width="@dimen/card_view_image_size"
+            android:layout_height="@dimen/card_view_image_size"
+            android:padding="@dimen/card_view_image_padding"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_save"
+            app:tint="@color/colorPrimary"
+            tools:ignore="ContentDescription,PrivateResource,ImageContrastCheck" />
+
+        <ImageView
             android:id="@+id/iv_delete"
             android:layout_width="@dimen/card_view_image_size"
             android:layout_height="@dimen/card_view_image_size"

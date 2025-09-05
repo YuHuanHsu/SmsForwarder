@@ -220,7 +220,7 @@ class TelegramUtils private constructor() {
                                 Log.i(TAG, "訊息發送成功")
                                 2
                             } else {
-                                val errorDesc = resp?.description ?: "未知錯誤"
+                                val errorDesc = resp?.message ?: "未知錯誤"
                                 Log.e(TAG, "Telegram API 回傳錯誤: $errorDesc")
                                 0
                             }
