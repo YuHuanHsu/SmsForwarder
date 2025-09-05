@@ -30,9 +30,14 @@
 /psd
 /pic/*.psd
 
-# BMAD (local only)
+# AI tools (local only)
 .bmad-core/
 .bmad-*/
+.claude/
+.ai/
+.clinerules/
+.gemini/
+AGENTS.md
 
 # Additional ignores
 build/
