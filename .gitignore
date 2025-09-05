@@ -1,33 +1,49 @@
+*.bak
+*.classpath
+*.iml
+*.project
+*/*.classpath
+*/*.project
+*/.settings/*
+.DS_Store
+.externalNativeBuild
+.gradle
+.settings/*
+/*.txt
+/.idea
+/LocalRepository
+/app/build
+/app/debug
+/app/mapping.txt
+/app/pppscn.jks
+/app/release
+/app/seeds.txt
+/app/src/test
+/app/unused.txt
+/build
+/captures
+/keystore
+/local.properties
+/pic/*.bkp
+/pic/*.drawio
+/pic/*.vsdx
+/psd
+/pic/*.psd
+
 # BMAD (local only)
 .bmad-core/
 .bmad-*/
-# Android/Gradle typical ignore rules
-.gradle/
+
+# Additional ignores
 build/
 **/build/
-local.properties
-/.idea/
-*.iml
-.gradle
 dist/
 /gradle/
 /.cxx/
 *.log
 *.tmp
 *.keystore
-
-# Kotlin/Java
-*.class
-*.jar
-*.war
-*.ear
-
-# Generated
-app/build/
 **/tmp/
 **/out/
-
-# Misc
-.DS_Store
 *.swp
 .vscode/

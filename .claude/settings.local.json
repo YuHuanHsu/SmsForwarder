@@ -8,7 +8,9 @@
       "Bash(./gradlew build:*)",
       "Bash(./gradlew:*)",
       "Bash(export:*)",
-      "Bash(export PATH=$JAVA_HOME/bin:$PATH)"
+      "Bash(export PATH=$JAVA_HOME/bin:$PATH)",
+      "Bash(git checkout:*)",
+      "Bash(git add:*)"
     ],
     "deny": [],
     "ask": []

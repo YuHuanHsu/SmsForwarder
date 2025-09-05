@@ -60,7 +60,7 @@ android {
     def gitCommitId = getGitCommitId()
 
     defaultConfig {
-        applicationId "com.idormy.sms.forwarder.enhanced"
+        applicationId "com.idormy.sms.forwarder"
         minSdkVersion build_versions.min_sdk
         targetSdkVersion build_versions.target_sdk
         versionCode build_versions.version_code
@@ -90,7 +90,12 @@ android {
             storeFile keyProps['storeFile'] ? file(keyProps['storeFile']) : null
             storePassword keyProps['storePassword']
         }
-        
+        debug {
+            keyAlias keyProps['keyAlias']
+            keyPassword keyProps['keyPassword']
+            storeFile keyProps['storeFile'] ? file(keyProps['storeFile']) : null
+            storePassword keyProps['storePassword']
+        }
     }
 
     buildTypes {
@@ -124,7 +129,6 @@ android {
             }
         }
         debug {
-            applicationIdSuffix ".debug"
             // 调试模式开关
             debuggable true
             jniDebuggable true
@@ -135,7 +139,7 @@ android {
             // 混淆配置
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             if (isNeedPackage.toBoolean()) {
-                signingConfig signingConfigs.debug
+                signingConfig signingConfigs.release
                 if (file('local.properties').exists()) {
                     Properties properties = new Properties()
                     properties.load(project.rootProject.file('local.properties').newDataInputStream())
