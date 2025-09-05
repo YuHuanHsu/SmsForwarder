@@ -1,0 +1,87 @@
+{
+    "version": 3,
+    "artifactType": {
+        "type": "APK",
+        "kind": "Directory"
+    },
+    "applicationId": "com.idormy.sms.forwarder.enhanced.debug",
+    "variantName": "debug",
+    "elements": [
+        {
+            "type": "UNIVERSAL",
+            "filters": [
+                
+            ],
+            "attributes": [
+                
+            ],
+            "versionCode": 100055,
+            "versionName": "3.4.0-enhanced.250904",
+            "outputFile": "SmsF_3.4.0-enhanced.250904_100055_universal_debug.apk"
+        },
+        {
+            "type": "ONE_OF_MANY",
+            "filters": [
+                {
+                    "filterType": "ABI",
+                    "value": "x86"
+                }
+            ],
+            "attributes": [
+                
+            ],
+            "versionCode": 400055,
+            "versionName": "3.4.0-enhanced.250904",
+            "outputFile": "SmsF_3.4.0-enhanced.250904_400055_x86_debug.apk"
+        },
+        {
+            "type": "ONE_OF_MANY",
+            "filters": [
+                {
+                    "filterType": "ABI",
+                    "value": "armeabi-v7a"
+                }
+            ],
+            "attributes": [
+                
+            ],
+            "versionCode": 200055,
+            "versionName": "3.4.0-enhanced.250904",
+            "outputFile": "SmsF_3.4.0-enhanced.250904_200055_armeabi-v7a_debug.apk"
+        },
+        {
+            "type": "ONE_OF_MANY",
+            "filters": [
+                {
+                    "filterType": "ABI",
+                    "value": "arm64-v8a"
+                }
+            ],
+            "attributes": [
+                
+            ],
+            "versionCode": 300055,
+            "versionName": "3.4.0-enhanced.250904",
+            "outputFile": "SmsF_3.4.0-enhanced.250904_300055_arm64-v8a_debug.apk"
+        },
+        {
+            "type": "ONE_OF_MANY",
+            "filters": [
+                {
+                    "filterType": "ABI",
+                    "value": "x86_64"
+                }
+            ],
+            "attributes": [
+                
+            ],
+            "versionCode": 500055,
+            "versionName": "3.4.0-enhanced.250904",
+            "outputFile": "SmsF_3.4.0-enhanced.250904_500055_x86_64_debug.apk"
+        }
+    ],
+    "elementType": "File",
+    "buildDate": "250904",
+    "buildTime": "2025-09-04 18:21:10",
+    "gitCommitId": ""
+}

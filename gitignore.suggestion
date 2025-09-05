@@ -1,0 +1,30 @@
+# Android/Gradle typical ignore rules
+.gradle/
+build/
+**/build/
+local.properties
+/.idea/
+*.iml
+.gradle
+dist/
+/gradle/
+/.cxx/
+*.log
+*.tmp
+*.keystore
+
+# Kotlin/Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Generated
+app/build/
+**/tmp/
+**/out/
+
+# Misc
+.DS_Store
+*.swp
+.vscode/

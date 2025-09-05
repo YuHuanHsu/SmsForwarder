@@ -1,0 +1,1172 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.idormy.sms.forwarder.enhanced.debug"
+4    android:installLocation="internalOnly"
+5    android:versionCode="100055"
+6    android:versionName="3.4.0-enhanced.250904" >
+7
+8    <uses-sdk
+9        android:minSdkVersion="19"
+9-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml
+10        android:targetSdkVersion="33" />
+10-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml
+11
+12    <uses-feature
+12-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:6:5-8:36
+13        android:name="android.hardware.telephony"
+13-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:7:9-50
+14        android:required="false" />
+14-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:8:9-33
+15    <uses-feature android:name="android.hardware.camera" />
+15-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:9:5-60
+15-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:9:19-57
+16    <uses-feature
+16-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:10:5-12:36
+17        android:name="android.hardware.camera.flash"
+17-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:11:9-53
+18        android:required="true" />
+18-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:12:9-33
+19
+20    <uses-permission android:name="com.android.permission.GET_INSTALLED_APPS" />
+20-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:14:5-81
+20-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:14:22-78
+21    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+21-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:15:5-17:53
+21-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:16:9-61
+22    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+22-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:18:5-79
+22-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:18:22-76
+23    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+23-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:19:5-81
+23-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:19:22-78
+24    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+24-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:20:5-85
+24-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:20:22-82
+25    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+25-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:21:5-76
+25-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:21:22-73
+26    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+26-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:22:5-79
+26-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:22:22-76
+27    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+27-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:23:5-76
+27-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:23:22-73
+28    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+28-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:24:5-79
+28-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:24:22-76
+29    <uses-permission android:name="android.permission.INTERNET" />
+29-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:25:5-67
+29-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:25:22-64
+30    <!-- 授予应用程序访问系统开机事件的权限 -->
+31    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+31-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:27:5-29:47
+31-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:28:9-70
+32    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+32-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:30:5-81
+32-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:30:22-78
+33    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+33-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:31:5-80
+33-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:31:22-77
+34    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+34-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:32:5-79
+34-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:32:22-76
+35    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+35-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:33:5-81
+35-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:33:22-78
+36    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+36-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:34:5-36:40
+36-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:35:9-66
+37    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+37-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:37:5-70
+37-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:37:22-67
+38    <uses-permission android:name="android.permission.RECEIVE_MMS" />
+38-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:38:5-70
+38-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:38:22-67
+39    <uses-permission android:name="android.permission.RECEIVE_WAP_PUSH" />
+39-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:39:5-75
+39-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:39:22-72
+40    <uses-permission android:name="android.permission.READ_SMS" />
+40-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:40:5-67
+40-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:40:22-64
+41    <uses-permission android:name="android.permission.SEND_SMS" />
+41-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:41:5-67
+41-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:41:22-64
+42    <uses-permission android:name="android.permission.CALL_PHONE" />
+42-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:42:5-69
+42-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:42:22-66
+43    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+43-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:43:5-75
+43-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:43:22-72
+44    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+44-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:44:5-77
+44-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:44:22-74
+45    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+45-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:45:5-72
+45-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:45:22-69
+46    <uses-permission android:name="android.permission.READ_CONTACTS" />
+46-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:46:5-72
+46-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:46:22-69
+47    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+47-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:47:5-73
+47-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:47:22-70
+48    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+48-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:48:5-71
+48-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:48:22-68
+49    <!-- Android 9（API 级别 28）或更高版本并使用前台服务，则其必须请求 FOREGROUND_SERVICE 权限 -->
+50    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+50-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:50:5-77
+50-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:50:22-74
+51    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+51-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:51:5-95
+51-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:51:22-92
+52    <uses-permission android:name="android.permission.BATTERY_STATS" />
+52-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:52:5-54:47
+52-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:53:9-56
+53    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+53-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:55:5-77
+53-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:55:22-74
+54    <uses-permission android:name="android.permission.CANCEL_NOTIFICATIONS " />
+54-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:56:5-80
+54-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:56:22-77
+55    <uses-permission android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" />
+55-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:57:5-59:47
+55-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:58:9-77
+56    <uses-permission android:name="android.permission.ACTION_NOTIFICATION_LISTENER_SETTINGS" />
+56-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:60:5-96
+56-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:60:22-93
+57    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+57-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:61:5-63:47
+57-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:62:9-59
+58    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+58-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:64:5-66:47
+58-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:65:9-57
+59    <!-- 进程杀死 -->
+60    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+60-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:68:5-84
+60-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:68:22-81
+61    <uses-permission android:name="android.permission.READ_LOGS" />
+61-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:69:5-71:47
+61-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:70:9-52
+62    <uses-permission android:name="android.permission.REBOOT" />
+62-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:72:5-74:47
+62-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:73:9-49
+63    <uses-permission android:name="android.permission.BLUETOOTH" />
+63-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:75:5-68
+63-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:75:22-65
+64    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+64-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:76:5-74
+64-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:76:22-71
+65    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+65-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:77:5-76
+65-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:77:22-73
+66    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+66-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:78:5-73
+66-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:78:22-70
+67    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+67-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:79:5-78
+67-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:79:22-75
+68    <uses-permission android:name="android.permission.VIBRATE" />
+68-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:80:5-66
+68-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:80:22-63
+69    <uses-permission android:name="android.permission.CAMERA" />
+69-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:81:5-65
+69-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:81:22-62
+70    <uses-permission android:name="android.permission.GET_TASKS" />
+70-->[com.gyf.cactus:cactus:1.1.3-beta13] /Users/yuhuan/.gradle/caches/transforms-3/db2a2d9617f06ec8e733fee7a333d362/transformed/jetified-cactus-1.1.3-beta13/AndroidManifest.xml:11:5-68
+70-->[com.gyf.cactus:cactus:1.1.3-beta13] /Users/yuhuan/.gradle/caches/transforms-3/db2a2d9617f06ec8e733fee7a333d362/transformed/jetified-cactus-1.1.3-beta13/AndroidManifest.xml:11:22-65
+71    <uses-permission android:name="android.permission.WAKE_LOCK" />
+71-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:23:5-68
+71-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:23:22-65
+72
+73    <permission
+73-->[androidx.core:core:1.9.0] /Users/yuhuan/.gradle/caches/transforms-3/83773caaf57691d706003383a7824b90/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+74        android:name="com.idormy.sms.forwarder.enhanced.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+74-->[androidx.core:core:1.9.0] /Users/yuhuan/.gradle/caches/transforms-3/83773caaf57691d706003383a7824b90/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+75        android:protectionLevel="signature" />
+75-->[androidx.core:core:1.9.0] /Users/yuhuan/.gradle/caches/transforms-3/83773caaf57691d706003383a7824b90/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+76
+77    <uses-permission android:name="com.idormy.sms.forwarder.enhanced.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+77-->[androidx.core:core:1.9.0] /Users/yuhuan/.gradle/caches/transforms-3/83773caaf57691d706003383a7824b90/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+77-->[androidx.core:core:1.9.0] /Users/yuhuan/.gradle/caches/transforms-3/83773caaf57691d706003383a7824b90/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+78    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+78-->[com.umeng.umsdk:common:9.6.8] /Users/yuhuan/.gradle/caches/transforms-3/9830f7613936a5c8478f11f94ea60a03/transformed/jetified-common-9.6.8/AndroidManifest.xml:11:5-79
+78-->[com.umeng.umsdk:common:9.6.8] /Users/yuhuan/.gradle/caches/transforms-3/9830f7613936a5c8478f11f94ea60a03/transformed/jetified-common-9.6.8/AndroidManifest.xml:11:22-76
+79    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" /> <!-- 悬浮窗 -->
+79-->[com.github.pppscn:XHttp2:2.0.10] /Users/yuhuan/.gradle/caches/transforms-3/1abcbf07ff4220178b071bcdf5a82ad4/transformed/jetified-XHttp2-2.0.10/AndroidManifest.xml:11:5-13:47
+79-->[com.github.pppscn:XHttp2:2.0.10] /Users/yuhuan/.gradle/caches/transforms-3/1abcbf07ff4220178b071bcdf5a82ad4/transformed/jetified-XHttp2-2.0.10/AndroidManifest.xml:12:9-68
+80    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+80-->[com.github.pppscn.XUtil:xutil-sub:2.0.0] /Users/yuhuan/.gradle/caches/transforms-3/f102d79239322fc288494a212ee3ea67/transformed/jetified-xutil-sub-2.0.0/AndroidManifest.xml:40:5-78
+80-->[com.github.pppscn.XUtil:xutil-sub:2.0.0] /Users/yuhuan/.gradle/caches/transforms-3/f102d79239322fc288494a212ee3ea67/transformed/jetified-xutil-sub-2.0.0/AndroidManifest.xml:40:22-75
+81    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+81-->[com.github.pppscn.XUtil:xutil-sub:2.0.0] /Users/yuhuan/.gradle/caches/transforms-3/f102d79239322fc288494a212ee3ea67/transformed/jetified-xutil-sub-2.0.0/AndroidManifest.xml:45:5-83
+81-->[com.github.pppscn.XUtil:xutil-sub:2.0.0] /Users/yuhuan/.gradle/caches/transforms-3/f102d79239322fc288494a212ee3ea67/transformed/jetified-xutil-sub-2.0.0/AndroidManifest.xml:45:22-80
+82    <uses-permission android:name="android.permission.READ_CALENDAR" />
+82-->[com.github.pppscn.XUtil:xutil-sub:2.0.0] /Users/yuhuan/.gradle/caches/transforms-3/f102d79239322fc288494a212ee3ea67/transformed/jetified-xutil-sub-2.0.0/AndroidManifest.xml:54:5-72
+82-->[com.github.pppscn.XUtil:xutil-sub:2.0.0] /Users/yuhuan/.gradle/caches/transforms-3/f102d79239322fc288494a212ee3ea67/transformed/jetified-xutil-sub-2.0.0/AndroidManifest.xml:54:22-69
+83    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 修改手机状态 -->
+83-->[com.github.pppscn.XUtil:xutil-sub:2.0.0] /Users/yuhuan/.gradle/caches/transforms-3/f102d79239322fc288494a212ee3ea67/transformed/jetified-xutil-sub-2.0.0/AndroidManifest.xml:55:5-71
+83-->[com.github.pppscn.XUtil:xutil-sub:2.0.0] /Users/yuhuan/.gradle/caches/transforms-3/f102d79239322fc288494a212ee3ea67/transformed/jetified-xutil-sub-2.0.0/AndroidManifest.xml:55:22-68
+84    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
+84-->[com.github.pppscn.XUtil:xutil-sub:2.0.0] /Users/yuhuan/.gradle/caches/transforms-3/f102d79239322fc288494a212ee3ea67/transformed/jetified-xutil-sub-2.0.0/AndroidManifest.xml:57:5-59:47
+84-->[com.github.pppscn.XUtil:xutil-sub:2.0.0] /Users/yuhuan/.gradle/caches/transforms-3/f102d79239322fc288494a212ee3ea67/transformed/jetified-xutil-sub-2.0.0/AndroidManifest.xml:58:9-61
+85    <uses-permission android:name="android.permission.FLASHLIGHT" />
+85-->[com.github.pppscn.XUtil:xutil-sub:2.0.0] /Users/yuhuan/.gradle/caches/transforms-3/f102d79239322fc288494a212ee3ea67/transformed/jetified-xutil-sub-2.0.0/AndroidManifest.xml:62:5-69
+85-->[com.github.pppscn.XUtil:xutil-sub:2.0.0] /Users/yuhuan/.gradle/caches/transforms-3/f102d79239322fc288494a212ee3ea67/transformed/jetified-xutil-sub-2.0.0/AndroidManifest.xml:62:22-66
+86
+87    <uses-feature android:name="android.hardware.camera.autofocus" /> <!-- 状态栏权限 -->
+87-->[com.github.pppscn.XUtil:xutil-sub:2.0.0] /Users/yuhuan/.gradle/caches/transforms-3/f102d79239322fc288494a212ee3ea67/transformed/jetified-xutil-sub-2.0.0/AndroidManifest.xml:65:5-70
+87-->[com.github.pppscn.XUtil:xutil-sub:2.0.0] /Users/yuhuan/.gradle/caches/transforms-3/f102d79239322fc288494a212ee3ea67/transformed/jetified-xutil-sub-2.0.0/AndroidManifest.xml:65:19-67
+88    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+88-->[com.github.pppscn.XUtil:xutil-sub:2.0.0] /Users/yuhuan/.gradle/caches/transforms-3/f102d79239322fc288494a212ee3ea67/transformed/jetified-xutil-sub-2.0.0/AndroidManifest.xml:71:5-76
+88-->[com.github.pppscn.XUtil:xutil-sub:2.0.0] /Users/yuhuan/.gradle/caches/transforms-3/f102d79239322fc288494a212ee3ea67/transformed/jetified-xutil-sub-2.0.0/AndroidManifest.xml:71:22-73
+89
+90    <application
+90-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:83:5-381:19
+91        android:name="com.idormy.sms.forwarder.App"
+91-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:84:9-28
+92        android:allowBackup="true"
+92-->[gatewayapps.crondroid:crondroid:1.0.0] /Users/yuhuan/.gradle/caches/transforms-3/ba5f0d710712e45a7c00146f05a81390/transformed/jetified-crondroid-1.0.0/AndroidManifest.xml:12:9-35
+93        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+93-->[androidx.core:core:1.9.0] /Users/yuhuan/.gradle/caches/transforms-3/83773caaf57691d706003383a7824b90/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+94        android:configChanges="screenSize|keyboardHidden|orientation|keyboard"
+94-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:85:9-79
+95        android:debuggable="true"
+96        android:defaultToDeviceProtectedStorage="true"
+96-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:86:9-55
+97        android:directBootAware="true"
+97-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:87:9-39
+98        android:enableOnBackInvokedCallback="false"
+98-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:88:9-52
+99        android:fullBackupContent="@xml/backup_descriptor"
+99-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:89:9-59
+100        android:hardwareAccelerated="true"
+100-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:90:9-43
+101        android:icon="@mipmap/ic_launcher"
+101-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:91:9-43
+102        android:label="@string/app_name"
+102-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:92:9-41
+103        android:largeHeap="true"
+103-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:93:9-33
+104        android:networkSecurityConfig="@xml/network_security_config"
+104-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:94:9-69
+105        android:requestLegacyExternalStorage="true"
+105-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:95:9-52
+106        android:roundIcon="@mipmap/ic_launcher"
+106-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:96:9-48
+107        android:supportsRtl="true"
+107-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:97:9-35
+108        android:theme="@style/AppTheme"
+108-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:98:9-40
+109        android:usesCleartextTraffic="true"
+109-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:99:9-44
+110        android:windowSoftInputMode="adjustPan|stateHidden" >
+110-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:100:9-60
+111        <meta-data
+111-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:103:9-105:36
+112            android:name="ScopedStorage"
+112-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:104:13-41
+113            android:value="true" />
+113-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:105:13-33
+114
+115        <activity
+115-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:107:9-122:20
+116            android:name="com.idormy.sms.forwarder.activity.SplashActivity"
+116-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:108:13-52
+117            android:configChanges="screenSize|keyboardHidden|orientation|keyboard"
+117-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:109:13-83
+118            android:excludeFromRecents="true"
+118-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:110:13-46
+119            android:exported="true"
+119-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:111:13-36
+120            android:screenOrientation="portrait"
+120-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:112:13-49
+121            android:taskAffinity=":splash"
+121-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:113:13-43
+122            android:theme="@style/AppTheme.Launch.App"
+122-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:114:13-55
+123            android:windowSoftInputMode="adjustPan|stateHidden" >
+123-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:115:13-64
+124            <intent-filter>
+124-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:118:13-121:29
+125                <action android:name="android.intent.action.MAIN" />
+125-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:119:17-69
+125-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:119:25-66
+126
+127                <category android:name="android.intent.category.LAUNCHER" />
+127-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:120:17-77
+127-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:120:27-74
+128            </intent-filter>
+129        </activity>
+130        <activity
+130-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:123:9-129:45
+131            android:name="com.idormy.sms.forwarder.activity.MainActivity"
+131-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:124:13-50
+132            android:configChanges="screenSize|keyboardHidden|orientation|keyboard"
+132-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:125:13-83
+133            android:exported="true"
+133-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:126:13-36
+134            android:screenOrientation="portrait"
+134-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:127:13-49
+135            android:windowSoftInputMode="adjustPan|stateHidden" />
+135-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:128:13-64
+136        <activity
+136-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:130:9-137:45
+137            android:name="com.idormy.sms.forwarder.activity.ClientActivity"
+137-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:131:13-52
+138            android:configChanges="screenSize|keyboardHidden|orientation|keyboard"
+138-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:132:13-83
+139            android:exported="true"
+139-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:133:13-36
+140            android:launchMode="singleInstance"
+140-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:134:13-48
+141            android:screenOrientation="portrait"
+141-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:135:13-49
+142            android:windowSoftInputMode="adjustPan|stateHidden" />
+142-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:136:13-64
+143        <activity
+143-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:138:9-145:45
+144            android:name="com.idormy.sms.forwarder.activity.TaskActivity"
+144-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:139:13-50
+145            android:configChanges="screenSize|keyboardHidden|orientation|keyboard"
+145-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:140:13-83
+146            android:exported="true"
+146-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:141:13-36
+147            android:launchMode="singleInstance"
+147-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:142:13-48
+148            android:screenOrientation="portrait"
+148-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:143:13-49
+149            android:windowSoftInputMode="adjustPan|stateHidden" />
+149-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:144:13-64
+150        <!-- 通用浏览器 -->
+151        <activity
+151-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:147:9-191:20
+152            android:name="com.idormy.sms.forwarder.core.webview.AgentWebActivity"
+152-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:148:13-58
+153            android:configChanges="screenSize|keyboardHidden|orientation|keyboard"
+153-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:149:13-83
+154            android:exported="true"
+154-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:150:13-36
+155            android:hardwareAccelerated="true"
+155-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:151:13-47
+156            android:label="@string/app_browser_name"
+156-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:152:13-53
+157            android:theme="@style/AppTheme" >
+157-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:153:13-44
+158
+159            <!-- Scheme -->
+160            <intent-filter>
+160-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:155:13-166:29
+161                <action android:name="android.intent.action.VIEW" />
+161-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:156:17-69
+161-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:156:25-66
+162                <action android:name="com.xuexiang.xui.applink" />
+162-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:157:17-67
+162-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:157:25-64
+163
+164                <category android:name="android.intent.category.DEFAULT" />
+164-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:159:17-76
+164-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:159:27-73
+165                <category android:name="android.intent.category.BROWSABLE" />
+165-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:160:17-78
+165-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:160:27-75
+166
+167                <data android:scheme="http" />
+167-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:162:17-47
+167-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:162:23-44
+168                <data android:scheme="https" />
+168-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:162:17-47
+168-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:162:23-44
+169                <data android:scheme="about" />
+169-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:162:17-47
+169-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:162:23-44
+170                <data android:scheme="javascript" />
+170-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:162:17-47
+170-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:162:23-44
+171            </intent-filter>
+172            <!-- AppLink -->
+173            <intent-filter android:autoVerify="true" >
+173-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:168:13-190:29
+173-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:169:17-42
+174                <action android:name="android.intent.action.VIEW" />
+174-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:156:17-69
+174-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:156:25-66
+175
+176                <category android:name="android.intent.category.BROWSABLE" />
+176-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:160:17-78
+176-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:160:27-75
+177                <category android:name="android.intent.category.DEFAULT" />
+177-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:159:17-76
+177-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:159:27-73
+178
+179                <data android:scheme="http" />
+179-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:162:17-47
+179-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:162:23-44
+180                <data android:scheme="https" />
+180-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:162:17-47
+180-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:162:23-44
+181                <data android:scheme="inline" />
+181-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:162:17-47
+181-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:162:23-44
+182                <data android:mimeType="text/html" />
+182-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:162:17-47
+182-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:179:23-51
+183                <data android:mimeType="text/plain" />
+183-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:162:17-47
+183-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:179:23-51
+184                <data android:mimeType="application/xhtml+xml" />
+184-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:162:17-47
+184-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:179:23-51
+185                <data android:mimeType="application/vnd.wap.xhtml+xml" />
+185-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:162:17-47
+185-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:179:23-51
+186                <!-- 设置自己的applink -->
+187                <!-- <data -->
+188                <!-- android:host="xxx.com" -->
+189                <!-- android:scheme="http"/> -->
+190                <!-- <data -->
+191                <!-- android:host="xxx.com" -->
+192                <!-- android:scheme="https"/> -->
+193            </intent-filter>
+194        </activity>
+195
+196        <!-- fragment的页面容器 -->
+197        <activity
+197-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:194:9-200:45
+198            android:name="com.idormy.sms.forwarder.core.BaseActivity"
+198-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:195:13-46
+199            android:configChanges="screenSize|keyboardHidden|orientation|keyboard"
+199-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:196:13-83
+200            android:exported="true"
+200-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:197:13-36
+201            android:screenOrientation="portrait"
+201-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:198:13-49
+202            android:windowSoftInputMode="adjustPan|stateHidden" />
+202-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:199:13-64
+203        <!-- 版本更新提示 -->
+204        <activity
+204-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:202:9-207:45
+205            android:name="com.idormy.sms.forwarder.utils.update.UpdateTipDialog"
+205-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:203:13-57
+206            android:exported="true"
+206-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:204:13-36
+207            android:screenOrientation="portrait"
+207-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:205:13-49
+208            android:theme="@style/DialogTheme" />
+208-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:206:13-47
+209        <!-- Webview拦截提示弹窗 -->
+210        <activity
+210-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:209:9-214:45
+211            android:name="com.idormy.sms.forwarder.core.webview.WebViewInterceptDialog"
+211-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:210:13-64
+212            android:exported="true"
+212-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:211:13-36
+213            android:screenOrientation="portrait"
+213-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:212:13-49
+214            android:theme="@style/DialogTheme" />
+214-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:213:13-47
+215        <!-- applink的中转页面 -->
+216        <activity
+216-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:216:9-222:45
+217            android:name="com.idormy.sms.forwarder.core.XPageTransferActivity"
+217-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:217:13-55
+218            android:configChanges="screenSize|keyboardHidden|orientation|keyboard"
+218-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:218:13-83
+219            android:exported="true"
+219-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:219:13-36
+220            android:screenOrientation="portrait"
+220-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:220:13-49
+221            android:windowSoftInputMode="adjustPan|stateHidden" />
+221-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:221:13-64
+222
+223        <!-- 屏幕自适应设计图 -->
+224        <meta-data
+224-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:225:9-228:35
+225            android:name="design_width_in_dp"
+225-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:226:13-46
+226            android:exported="true"
+226-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:227:13-36
+227            android:value="360" />
+227-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:228:13-32
+228        <meta-data
+228-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:229:9-232:35
+229            android:name="design_height_in_dp"
+229-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:230:13-47
+230            android:exported="true"
+230-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:231:13-36
+231            android:value="640" />
+231-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:232:13-32
+232
+233        <service
+233-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:234:9-237:40
+234            android:name="com.idormy.sms.forwarder.service.BluetoothScanService"
+234-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:235:13-57
+235            android:enabled="true"
+235-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:236:13-35
+236            android:exported="false" />
+236-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:237:13-37
+237        <service
+237-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:238:9-240:38
+238            android:name="com.idormy.sms.forwarder.service.ForegroundService"
+238-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:239:13-54
+239            android:enabled="true" />
+239-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:240:13-35
+240        <service
+240-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:241:9-243:38
+241            android:name="com.idormy.sms.forwarder.service.HttpServerService"
+241-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:242:13-54
+242            android:enabled="true" />
+242-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:243:13-35
+243        <service
+243-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:244:9-247:56
+244            android:name="com.idormy.sms.forwarder.service.LocationService"
+244-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:245:13-52
+245            android:enabled="true"
+245-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:246:13-35
+246            android:foregroundServiceType="location" />
+246-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:247:13-53
+247        <service
+247-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:248:9-257:19
+248            android:name="com.idormy.sms.forwarder.service.NotificationService"
+248-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:249:13-56
+249            android:enabled="true"
+249-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:250:13-35
+250            android:exported="false"
+250-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:251:13-37
+251            android:label="@string/app_name"
+251-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:252:13-45
+252            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" >
+252-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:253:13-87
+253            <intent-filter>
+253-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:254:13-256:29
+254                <action android:name="android.service.notification.NotificationListenerService" />
+254-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:255:17-99
+254-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:255:25-96
+255            </intent-filter>
+256        </service>
+257
+258        <receiver
+258-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:259:9-265:20
+259            android:name="com.idormy.sms.forwarder.receiver.BatteryReceiver"
+259-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:260:13-53
+260            android:exported="true" >
+260-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:261:13-36
+261            <intent-filter>
+261-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:262:13-264:29
+262                <action android:name="android.intent.action.BATTERY_CHANGED" />
+262-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:263:17-80
+262-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:263:25-77
+263            </intent-filter>
+264        </receiver>
+265        <receiver
+265-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:266:9-289:20
+266            android:name="com.idormy.sms.forwarder.receiver.BluetoothReceiver"
+266-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:267:13-55
+267            android:exported="true" >
+267-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:268:13-36
+268            <intent-filter>
+268-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:269:13-288:29
+269
+270                <!-- 蓝牙设备发现 -->
+271                <action android:name="android.bluetooth.device.action.FOUND" />
+271-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:271:17-80
+271-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:271:25-77
+272                <!-- 蓝牙扫描完成 -->
+273                <action android:name="android.bluetooth.adapter.action.DISCOVERY_FINISHED" />
+273-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:273:17-94
+273-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:273:25-91
+274                <!-- 蓝牙状态改变 -->
+275                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+275-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:275:17-89
+275-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:275:25-86
+276                <!-- 蓝牙扫描模式改变 -->
+277                <action android:name="android.bluetooth.adapter.action.SCAN_MODE_CHANGED" />
+277-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:277:17-93
+277-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:277:25-90
+278                <!-- 本地蓝牙名称改变 -->
+279                <action android:name="android.bluetooth.adapter.action.LOCAL_NAME_CHANGED" />
+279-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:279:17-94
+279-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:279:25-91
+280                <!-- 蓝牙连接状态改变 -->
+281                <action android:name="android.bluetooth.adapter.action.CONNECTION_STATE_CHANGED" />
+281-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:281:17-100
+281-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:281:25-97
+282                <!-- 蓝牙设备配对状态改变 -->
+283                <action android:name="android.bluetooth.device.action.BOND_STATE_CHANGED" />
+283-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:283:17-93
+283-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:283:25-90
+284                <!-- 蓝牙设备连接 -->
+285                <action android:name="android.bluetooth.device.action.ACL_CONNECTED" />
+285-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:285:17-88
+285-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:285:25-85
+286                <!-- 蓝牙设备断开连接 -->
+287                <action android:name="android.bluetooth.device.action.ACL_DISCONNECTED" />
+287-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:287:17-91
+287-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:287:25-88
+288            </intent-filter>
+289        </receiver>
+290        <receiver
+290-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:290:9-302:20
+291            android:name="com.idormy.sms.forwarder.receiver.BootCompletedReceiver"
+291-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:291:13-59
+292            android:defaultToDeviceProtectedStorage="true"
+292-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:292:13-59
+293            android:directBootAware="true"
+293-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:293:13-43
+294            android:exported="true" >
+294-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:294:13-36
+295            <intent-filter android:priority="2147483647" >
+295-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:296:13-301:29
+295-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:296:28-57
+296                <action android:name="android.intent.action.BOOT_COMPLETED" />
+296-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:297:17-79
+296-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:297:25-76
+297                <action android:name="android.intent.action.USER_PRESENT" />
+297-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:298:17-77
+297-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:298:25-74
+298                <action android:name="android.intent.action.PACKAGE_RESTARTED" />
+298-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:299:17-82
+298-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:299:25-79
+299                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+299-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:300:17-86
+299-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:300:25-83
+300            </intent-filter>
+301        </receiver>
+302        <receiver
+302-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:303:9-311:20
+303            android:name="com.idormy.sms.forwarder.receiver.CallReceiver"
+303-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:304:13-50
+304            android:exported="true" >
+304-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:305:13-36
+305            <intent-filter>
+305-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:307:13-310:29
+306                <action android:name="android.intent.action.PHONE_STATE" />
+306-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:308:17-76
+306-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:308:25-73
+307                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+307-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:309:17-82
+307-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:309:25-79
+308            </intent-filter>
+309        </receiver>
+310        <receiver
+310-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:312:9-320:20
+311            android:name="com.idormy.sms.forwarder.receiver.LockScreenReceiver"
+311-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:313:13-56
+312            android:exported="true" >
+312-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:314:13-36
+313            <intent-filter>
+313-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:315:13-319:29
+314                <action android:name="android.intent.action.SCREEN_OFF" />
+314-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:316:17-75
+314-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:316:25-72
+315                <action android:name="android.intent.action.SCREEN_ON" />
+315-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:317:17-74
+315-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:317:25-71
+316                <action android:name="android.intent.action.ACTION_USER_PRESENT" />
+316-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:318:17-84
+316-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:318:25-81
+317            </intent-filter>
+318        </receiver>
+319        <receiver
+319-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:321:9-340:20
+320            android:name="com.idormy.sms.forwarder.receiver.NetworkChangeReceiver"
+320-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:322:13-59
+321            android:enabled="true"
+321-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:323:13-35
+322            android:exported="true"
+322-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:324:13-36
+323            android:permission="android.permission.READ_PHONE_STATE" >
+323-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:325:13-69
+324            <intent-filter>
+324-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:326:13-339:29
+325                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+325-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:327:17-329:50
+325-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:328:21-72
+326                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+326-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:330:17-332:50
+326-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:331:21-71
+327                <action android:name="android.net.wifi.STATE_CHANGE" />
+327-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:333:17-335:50
+327-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:334:21-65
+328                <!--
+329                    <action
+330                    android:name="android.intent.action.DATA_CONNECTION_STATE_CHANGED"
+331                    tools:ignore="BatteryLife" />
+332                -->
+333            </intent-filter>
+334        </receiver>
+335        <receiver
+335-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:341:9-348:20
+336            android:name="com.idormy.sms.forwarder.receiver.SimStateReceiver"
+336-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:342:13-54
+337            android:enabled="true"
+337-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:343:13-35
+338            android:exported="true" >
+338-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:344:13-36
+339            <intent-filter>
+339-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:345:13-347:29
+340                <action android:name="android.intent.action.SIM_STATE_CHANGED" />
+340-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:346:17-82
+340-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:346:25-79
+341            </intent-filter>
+342        </receiver>
+343        <receiver
+343-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:349:9-367:20
+344            android:name="com.idormy.sms.forwarder.receiver.SmsReceiver"
+344-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:350:13-49
+345            android:exported="true"
+345-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:351:13-36
+346            android:permission="android.permission.BROADCAST_SMS" >
+346-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:352:13-66
+347            <intent-filter android:priority="2147483647" >
+347-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:354:13-360:29
+347-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:354:28-57
+348
+349                <!-- 兼容OV系手机短信广播 -->
+350                <action android:name="android.provider.OppoSpeechAssist.SMS_RECEIVED" />
+350-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:356:17-89
+350-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:356:25-86
+351                <action android:name="android.provider.Telephony.SMS_DELIVER" />
+351-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:357:17-81
+351-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:357:25-78
+352                <!-- 短信广播 -->
+353                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+353-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:359:17-82
+353-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:359:25-79
+354            </intent-filter>
+355            <intent-filter android:priority="2147483647" >
+355-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:361:13-366:29
+355-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:361:28-57
+356                <action android:name="android.provider.Telephony.WAP_PUSH_RECEIVED" />
+356-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:362:17-87
+356-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:362:25-84
+357                <action android:name="android.provider.Telephony.WAP_PUSH_DELIVER" />
+357-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:363:17-86
+357-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:363:25-83
+358
+359                <data android:mimeType="application/vnd.wap.mms-message" />
+359-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:162:17-47
+359-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:179:23-51
+360            </intent-filter>
+361        </receiver>
+362
+363        <provider
+364            android:name="androidx.startup.InitializationProvider"
+364-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:370:13-67
+365            android:authorities="com.idormy.sms.forwarder.enhanced.debug.androidx-startup"
+365-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:371:13-68
+366            android:exported="false" >
+366-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:372:13-37
+367            <meta-data
+367-->[androidx.emoji2:emoji2:1.2.0] /Users/yuhuan/.gradle/caches/transforms-3/95e8a974502ecb7d6b55e18ea23d56ea/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+368                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+368-->[androidx.emoji2:emoji2:1.2.0] /Users/yuhuan/.gradle/caches/transforms-3/95e8a974502ecb7d6b55e18ea23d56ea/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+369                android:value="androidx.startup" />
+369-->[androidx.emoji2:emoji2:1.2.0] /Users/yuhuan/.gradle/caches/transforms-3/95e8a974502ecb7d6b55e18ea23d56ea/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+370            <meta-data
+370-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/yuhuan/.gradle/caches/transforms-3/df6e9227f4d7a14ac72f55b74732df32/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+371                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+371-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/yuhuan/.gradle/caches/transforms-3/df6e9227f4d7a14ac72f55b74732df32/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+372                android:value="androidx.startup" />
+372-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/yuhuan/.gradle/caches/transforms-3/df6e9227f4d7a14ac72f55b74732df32/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+373        </provider>
+374
+375        <service
+375-->[androidx.work:work-multiprocess:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/0b6613b56551dc8785173eac7f4b3ecb/transformed/jetified-work-multiprocess-2.8.1/AndroidManifest.xml:24:9-27:63
+376            android:name="androidx.work.multiprocess.RemoteWorkManagerService"
+376-->[androidx.work:work-multiprocess:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/0b6613b56551dc8785173eac7f4b3ecb/transformed/jetified-work-multiprocess-2.8.1/AndroidManifest.xml:25:13-79
+377            android:exported="false" />
+377-->[androidx.work:work-multiprocess:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/0b6613b56551dc8785173eac7f4b3ecb/transformed/jetified-work-multiprocess-2.8.1/AndroidManifest.xml:26:13-37
+378
+379        <activity
+379-->[com.gyf.cactus:cactus:1.1.3-beta13] /Users/yuhuan/.gradle/caches/transforms-3/db2a2d9617f06ec8e733fee7a333d362/transformed/jetified-cactus-1.1.3-beta13/AndroidManifest.xml:14:9-18:50
+380            android:name="com.gyf.cactus.pix.OnePixActivity"
+380-->[com.gyf.cactus:cactus:1.1.3-beta13] /Users/yuhuan/.gradle/caches/transforms-3/db2a2d9617f06ec8e733fee7a333d362/transformed/jetified-cactus-1.1.3-beta13/AndroidManifest.xml:15:13-61
+381            android:excludeFromRecents="true"
+381-->[com.gyf.cactus:cactus:1.1.3-beta13] /Users/yuhuan/.gradle/caches/transforms-3/db2a2d9617f06ec8e733fee7a333d362/transformed/jetified-cactus-1.1.3-beta13/AndroidManifest.xml:16:13-46
+382            android:launchMode="singleInstance"
+382-->[com.gyf.cactus:cactus:1.1.3-beta13] /Users/yuhuan/.gradle/caches/transforms-3/db2a2d9617f06ec8e733fee7a333d362/transformed/jetified-cactus-1.1.3-beta13/AndroidManifest.xml:17:13-48
+383            android:theme="@style/OnePixTheme" />
+383-->[com.gyf.cactus:cactus:1.1.3-beta13] /Users/yuhuan/.gradle/caches/transforms-3/db2a2d9617f06ec8e733fee7a333d362/transformed/jetified-cactus-1.1.3-beta13/AndroidManifest.xml:18:13-47
+384
+385        <service
+385-->[com.gyf.cactus:cactus:1.1.3-beta13] /Users/yuhuan/.gradle/caches/transforms-3/db2a2d9617f06ec8e733fee7a333d362/transformed/jetified-cactus-1.1.3-beta13/AndroidManifest.xml:20:9-22:72
+386            android:name="com.gyf.cactus.service.CactusJobService"
+386-->[com.gyf.cactus:cactus:1.1.3-beta13] /Users/yuhuan/.gradle/caches/transforms-3/db2a2d9617f06ec8e733fee7a333d362/transformed/jetified-cactus-1.1.3-beta13/AndroidManifest.xml:21:13-67
+387            android:permission="android.permission.BIND_JOB_SERVICE" />
+387-->[com.gyf.cactus:cactus:1.1.3-beta13] /Users/yuhuan/.gradle/caches/transforms-3/db2a2d9617f06ec8e733fee7a333d362/transformed/jetified-cactus-1.1.3-beta13/AndroidManifest.xml:22:13-69
+388        <service android:name="com.gyf.cactus.service.HideForegroundService" />
+388-->[com.gyf.cactus:cactus:1.1.3-beta13] /Users/yuhuan/.gradle/caches/transforms-3/db2a2d9617f06ec8e733fee7a333d362/transformed/jetified-cactus-1.1.3-beta13/AndroidManifest.xml:23:9-80
+388-->[com.gyf.cactus:cactus:1.1.3-beta13] /Users/yuhuan/.gradle/caches/transforms-3/db2a2d9617f06ec8e733fee7a333d362/transformed/jetified-cactus-1.1.3-beta13/AndroidManifest.xml:23:18-77
+389        <service
+389-->[com.gyf.cactus:cactus:1.1.3-beta13] /Users/yuhuan/.gradle/caches/transforms-3/db2a2d9617f06ec8e733fee7a333d362/transformed/jetified-cactus-1.1.3-beta13/AndroidManifest.xml:24:9-27:39
+390            android:name="com.gyf.cactus.service.LocalService"
+390-->[com.gyf.cactus:cactus:1.1.3-beta13] /Users/yuhuan/.gradle/caches/transforms-3/db2a2d9617f06ec8e733fee7a333d362/transformed/jetified-cactus-1.1.3-beta13/AndroidManifest.xml:25:13-63
+391            android:enabled="true"
+391-->[com.gyf.cactus:cactus:1.1.3-beta13] /Users/yuhuan/.gradle/caches/transforms-3/db2a2d9617f06ec8e733fee7a333d362/transformed/jetified-cactus-1.1.3-beta13/AndroidManifest.xml:26:13-35
+392            android:exported="true" />
+392-->[com.gyf.cactus:cactus:1.1.3-beta13] /Users/yuhuan/.gradle/caches/transforms-3/db2a2d9617f06ec8e733fee7a333d362/transformed/jetified-cactus-1.1.3-beta13/AndroidManifest.xml:27:13-36
+393        <service
+393-->[com.gyf.cactus:cactus:1.1.3-beta13] /Users/yuhuan/.gradle/caches/transforms-3/db2a2d9617f06ec8e733fee7a333d362/transformed/jetified-cactus-1.1.3-beta13/AndroidManifest.xml:28:9-32:54
+394            android:name="com.gyf.cactus.service.RemoteService"
+394-->[com.gyf.cactus:cactus:1.1.3-beta13] /Users/yuhuan/.gradle/caches/transforms-3/db2a2d9617f06ec8e733fee7a333d362/transformed/jetified-cactus-1.1.3-beta13/AndroidManifest.xml:29:13-64
+395            android:enabled="true"
+395-->[com.gyf.cactus:cactus:1.1.3-beta13] /Users/yuhuan/.gradle/caches/transforms-3/db2a2d9617f06ec8e733fee7a333d362/transformed/jetified-cactus-1.1.3-beta13/AndroidManifest.xml:30:13-35
+396            android:exported="true"
+396-->[com.gyf.cactus:cactus:1.1.3-beta13] /Users/yuhuan/.gradle/caches/transforms-3/db2a2d9617f06ec8e733fee7a333d362/transformed/jetified-cactus-1.1.3-beta13/AndroidManifest.xml:31:13-36
+397            android:process=":cactusRemoteService" />
+397-->[com.gyf.cactus:cactus:1.1.3-beta13] /Users/yuhuan/.gradle/caches/transforms-3/db2a2d9617f06ec8e733fee7a333d362/transformed/jetified-cactus-1.1.3-beta13/AndroidManifest.xml:32:13-51
+398
+399        <provider
+399-->[com.github.pppscn:XUI:1.2.2_250201] /Users/yuhuan/.gradle/caches/transforms-3/6eb45b56e614a88a824a2715a2e40ed0/transformed/jetified-XUI-1.2.2_250201/AndroidManifest.xml:10:9-14:43
+400            android:name="com.xuexiang.xui.XUIInitProvider"
+400-->[com.github.pppscn:XUI:1.2.2_250201] /Users/yuhuan/.gradle/caches/transforms-3/6eb45b56e614a88a824a2715a2e40ed0/transformed/jetified-XUI-1.2.2_250201/AndroidManifest.xml:11:13-60
+401            android:authorities="com.idormy.sms.forwarder.enhanced.debug.xui-init-provider"
+401-->[com.github.pppscn:XUI:1.2.2_250201] /Users/yuhuan/.gradle/caches/transforms-3/6eb45b56e614a88a824a2715a2e40ed0/transformed/jetified-XUI-1.2.2_250201/AndroidManifest.xml:12:13-69
+402            android:exported="false"
+402-->[com.github.pppscn:XUI:1.2.2_250201] /Users/yuhuan/.gradle/caches/transforms-3/6eb45b56e614a88a824a2715a2e40ed0/transformed/jetified-XUI-1.2.2_250201/AndroidManifest.xml:13:13-37
+403            android:multiprocess="true" />
+403-->[com.github.pppscn:XUI:1.2.2_250201] /Users/yuhuan/.gradle/caches/transforms-3/6eb45b56e614a88a824a2715a2e40ed0/transformed/jetified-XUI-1.2.2_250201/AndroidManifest.xml:14:13-40
+404
+405        <activity
+405-->[com.github.pppscn:XUI:1.2.2_250201] /Users/yuhuan/.gradle/caches/transforms-3/6eb45b56e614a88a824a2715a2e40ed0/transformed/jetified-XUI-1.2.2_250201/AndroidManifest.xml:16:9-19:59
+406            android:name="com.xuexiang.xui.widget.imageview.preview.ui.PreviewActivity"
+406-->[com.github.pppscn:XUI:1.2.2_250201] /Users/yuhuan/.gradle/caches/transforms-3/6eb45b56e614a88a824a2715a2e40ed0/transformed/jetified-XUI-1.2.2_250201/AndroidManifest.xml:17:13-88
+407            android:exported="false"
+407-->[com.github.pppscn:XUI:1.2.2_250201] /Users/yuhuan/.gradle/caches/transforms-3/6eb45b56e614a88a824a2715a2e40ed0/transformed/jetified-XUI-1.2.2_250201/AndroidManifest.xml:18:13-37
+408            android:theme="@style/XUITheme.Translucent" />
+408-->[com.github.pppscn:XUI:1.2.2_250201] /Users/yuhuan/.gradle/caches/transforms-3/6eb45b56e614a88a824a2715a2e40ed0/transformed/jetified-XUI-1.2.2_250201/AndroidManifest.xml:19:13-56
+409        <activity
+409-->[com.github.pppscn:XUI:1.2.2_250201] /Users/yuhuan/.gradle/caches/transforms-3/6eb45b56e614a88a824a2715a2e40ed0/transformed/jetified-XUI-1.2.2_250201/AndroidManifest.xml:20:9-23:59
+410            android:name="com.xuexiang.xui.widget.imageview.preview.ui.VideoPlayerActivity"
+410-->[com.github.pppscn:XUI:1.2.2_250201] /Users/yuhuan/.gradle/caches/transforms-3/6eb45b56e614a88a824a2715a2e40ed0/transformed/jetified-XUI-1.2.2_250201/AndroidManifest.xml:21:13-92
+411            android:exported="false"
+411-->[com.github.pppscn:XUI:1.2.2_250201] /Users/yuhuan/.gradle/caches/transforms-3/6eb45b56e614a88a824a2715a2e40ed0/transformed/jetified-XUI-1.2.2_250201/AndroidManifest.xml:22:13-37
+412            android:theme="@style/XUITheme.Translucent" />
+412-->[com.github.pppscn:XUI:1.2.2_250201] /Users/yuhuan/.gradle/caches/transforms-3/6eb45b56e614a88a824a2715a2e40ed0/transformed/jetified-XUI-1.2.2_250201/AndroidManifest.xml:23:13-56
+413
+414        <uses-library
+414-->[androidx.window:window:1.0.0] /Users/yuhuan/.gradle/caches/transforms-3/259c19636ffc15089d692d16abd641ca/transformed/jetified-window-1.0.0/AndroidManifest.xml:25:9-27:40
+415            android:name="androidx.window.extensions"
+415-->[androidx.window:window:1.0.0] /Users/yuhuan/.gradle/caches/transforms-3/259c19636ffc15089d692d16abd641ca/transformed/jetified-window-1.0.0/AndroidManifest.xml:26:13-54
+416            android:required="false" />
+416-->[androidx.window:window:1.0.0] /Users/yuhuan/.gradle/caches/transforms-3/259c19636ffc15089d692d16abd641ca/transformed/jetified-window-1.0.0/AndroidManifest.xml:27:13-37
+417        <uses-library
+417-->[androidx.window:window:1.0.0] /Users/yuhuan/.gradle/caches/transforms-3/259c19636ffc15089d692d16abd641ca/transformed/jetified-window-1.0.0/AndroidManifest.xml:28:9-30:40
+418            android:name="androidx.window.sidecar"
+418-->[androidx.window:window:1.0.0] /Users/yuhuan/.gradle/caches/transforms-3/259c19636ffc15089d692d16abd641ca/transformed/jetified-window-1.0.0/AndroidManifest.xml:29:13-51
+419            android:required="false" />
+419-->[androidx.window:window:1.0.0] /Users/yuhuan/.gradle/caches/transforms-3/259c19636ffc15089d692d16abd641ca/transformed/jetified-window-1.0.0/AndroidManifest.xml:30:13-37
+420
+421        <service
+421-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:39:9-45:35
+422            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+422-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:40:13-88
+423            android:directBootAware="false"
+423-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:41:13-44
+424            android:enabled="@bool/enable_system_alarm_service_default"
+424-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:42:13-72
+425            android:exported="false" />
+425-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:43:13-37
+426        <service
+426-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:46:9-52:35
+427            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+427-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:47:13-84
+428            android:directBootAware="false"
+428-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:48:13-44
+429            android:enabled="@bool/enable_system_job_service_default"
+429-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:49:13-70
+430            android:exported="true"
+430-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:50:13-36
+431            android:permission="android.permission.BIND_JOB_SERVICE" />
+431-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:51:13-69
+432        <service
+432-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:53:9-59:35
+433            android:name="androidx.work.impl.foreground.SystemForegroundService"
+433-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:54:13-81
+434            android:directBootAware="false"
+434-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:55:13-44
+435            android:enabled="@bool/enable_system_foreground_service_default"
+435-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:56:13-77
+436            android:exported="false" />
+436-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:57:13-37
+437
+438        <receiver
+438-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:61:9-66:35
+439            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+439-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:62:13-88
+440            android:directBootAware="false"
+440-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:63:13-44
+441            android:enabled="true"
+441-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:64:13-35
+442            android:exported="false" />
+442-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:65:13-37
+443        <receiver
+443-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:67:9-77:20
+444            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+444-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:68:13-106
+445            android:directBootAware="false"
+445-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:69:13-44
+446            android:enabled="false"
+446-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:70:13-36
+447            android:exported="false" >
+447-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:71:13-37
+448            <intent-filter>
+448-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:73:13-76:29
+449                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+449-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:74:17-87
+449-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:74:25-84
+450                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+450-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:75:17-90
+450-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:75:25-87
+451            </intent-filter>
+452        </receiver>
+453        <receiver
+453-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:78:9-88:20
+454            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+454-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:79:13-104
+455            android:directBootAware="false"
+455-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:80:13-44
+456            android:enabled="false"
+456-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:81:13-36
+457            android:exported="false" >
+457-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:82:13-37
+458            <intent-filter>
+458-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:84:13-87:29
+459                <action android:name="android.intent.action.BATTERY_OKAY" />
+459-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:85:17-77
+459-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:85:25-74
+460                <action android:name="android.intent.action.BATTERY_LOW" />
+460-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:86:17-76
+460-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:86:25-73
+461            </intent-filter>
+462        </receiver>
+463        <receiver
+463-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:89:9-99:20
+464            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+464-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:90:13-104
+465            android:directBootAware="false"
+465-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:91:13-44
+466            android:enabled="false"
+466-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:92:13-36
+467            android:exported="false" >
+467-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:93:13-37
+468            <intent-filter>
+468-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:95:13-98:29
+469                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+469-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:96:17-83
+469-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:96:25-80
+470                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+470-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:97:17-82
+470-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:97:25-79
+471            </intent-filter>
+472        </receiver>
+473        <receiver
+473-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:100:9-109:20
+474            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+474-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:101:13-103
+475            android:directBootAware="false"
+475-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:102:13-44
+476            android:enabled="false"
+476-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:103:13-36
+477            android:exported="false" >
+477-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:104:13-37
+478            <intent-filter>
+478-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:106:13-108:29
+479                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+479-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:327:17-329:50
+479-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:328:21-72
+480            </intent-filter>
+481        </receiver>
+482        <receiver
+482-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:110:9-121:20
+483            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+483-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:111:13-88
+484            android:directBootAware="false"
+484-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:112:13-44
+485            android:enabled="false"
+485-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:113:13-36
+486            android:exported="false" >
+486-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:114:13-37
+487            <intent-filter>
+487-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:116:13-120:29
+488                <action android:name="android.intent.action.BOOT_COMPLETED" />
+488-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:297:17-79
+488-->/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/AndroidManifest.xml:297:25-76
+489                <action android:name="android.intent.action.TIME_SET" />
+489-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:118:17-73
+489-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:118:25-70
+490                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+490-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:119:17-81
+490-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:119:25-78
+491            </intent-filter>
+492        </receiver>
+493        <receiver
+493-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:122:9-131:20
+494            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+494-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:123:13-99
+495            android:directBootAware="false"
+495-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:124:13-44
+496            android:enabled="@bool/enable_system_alarm_service_default"
+496-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:125:13-72
+497            android:exported="false" >
+497-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:126:13-37
+498            <intent-filter>
+498-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:128:13-130:29
+499                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+499-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:129:17-98
+499-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:129:25-95
+500            </intent-filter>
+501        </receiver>
+502        <receiver
+502-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:132:9-142:20
+503            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+503-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:133:13-78
+504            android:directBootAware="false"
+504-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:134:13-44
+505            android:enabled="true"
+505-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:135:13-35
+506            android:exported="true"
+506-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:136:13-36
+507            android:permission="android.permission.DUMP" >
+507-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:137:13-57
+508            <intent-filter>
+508-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:139:13-141:29
+509                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+509-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:140:17-88
+509-->[androidx.work:work-runtime:2.8.1] /Users/yuhuan/.gradle/caches/transforms-3/b5af9e8a60d6d3c22655783c2b6ce3a9/transformed/work-runtime-2.8.1/AndroidManifest.xml:140:25-85
+510            </intent-filter>
+511        </receiver>
+512
+513        <service
+513-->[androidx.room:room-runtime:2.5.2] /Users/yuhuan/.gradle/caches/transforms-3/e80cc7ace0e9943f541677cc7540f3dc/transformed/room-runtime-2.5.2/AndroidManifest.xml:24:9-28:63
+514            android:name="androidx.room.MultiInstanceInvalidationService"
+514-->[androidx.room:room-runtime:2.5.2] /Users/yuhuan/.gradle/caches/transforms-3/e80cc7ace0e9943f541677cc7540f3dc/transformed/room-runtime-2.5.2/AndroidManifest.xml:25:13-74
+515            android:directBootAware="true"
+515-->[androidx.room:room-runtime:2.5.2] /Users/yuhuan/.gradle/caches/transforms-3/e80cc7ace0e9943f541677cc7540f3dc/transformed/room-runtime-2.5.2/AndroidManifest.xml:26:13-43
+516            android:exported="false" />
+516-->[androidx.room:room-runtime:2.5.2] /Users/yuhuan/.gradle/caches/transforms-3/e80cc7ace0e9943f541677cc7540f3dc/transformed/room-runtime-2.5.2/AndroidManifest.xml:27:13-37
+517
+518        <receiver android:name="com.just.agentweb.download.NotificationCancelReceiver" />
+518-->[com.github.xuexiangjys.AgentWeb:agentweb-download:1.0.1] /Users/yuhuan/.gradle/caches/transforms-3/54a16dae90913802ae999bd1b058ffe5/transformed/jetified-agentweb-download-1.0.1/AndroidManifest.xml:10:9-90
+518-->[com.github.xuexiangjys.AgentWeb:agentweb-download:1.0.1] /Users/yuhuan/.gradle/caches/transforms-3/54a16dae90913802ae999bd1b058ffe5/transformed/jetified-agentweb-download-1.0.1/AndroidManifest.xml:10:19-87
+519
+520        <provider
+520-->[com.github.xuexiangjys.AgentWeb:agentweb-core:1.0.1] /Users/yuhuan/.gradle/caches/transforms-3/95e589d8ee72e8634b7e6bca386bf12d/transformed/jetified-agentweb-core-1.0.1/AndroidManifest.xml:10:9-18:20
+521            android:name="com.just.agentweb.core.web.AgentWebFileProvider"
+521-->[com.github.xuexiangjys.AgentWeb:agentweb-core:1.0.1] /Users/yuhuan/.gradle/caches/transforms-3/95e589d8ee72e8634b7e6bca386bf12d/transformed/jetified-agentweb-core-1.0.1/AndroidManifest.xml:11:13-75
+522            android:authorities="com.idormy.sms.forwarder.enhanced.debug.AgentWebFileProvider"
+522-->[com.github.xuexiangjys.AgentWeb:agentweb-core:1.0.1] /Users/yuhuan/.gradle/caches/transforms-3/95e589d8ee72e8634b7e6bca386bf12d/transformed/jetified-agentweb-core-1.0.1/AndroidManifest.xml:12:13-72
+523            android:exported="false"
+523-->[com.github.xuexiangjys.AgentWeb:agentweb-core:1.0.1] /Users/yuhuan/.gradle/caches/transforms-3/95e589d8ee72e8634b7e6bca386bf12d/transformed/jetified-agentweb-core-1.0.1/AndroidManifest.xml:13:13-37
+524            android:grantUriPermissions="true" >
+524-->[com.github.xuexiangjys.AgentWeb:agentweb-core:1.0.1] /Users/yuhuan/.gradle/caches/transforms-3/95e589d8ee72e8634b7e6bca386bf12d/transformed/jetified-agentweb-core-1.0.1/AndroidManifest.xml:14:13-47
+525            <meta-data
+525-->[com.github.xuexiangjys.AgentWeb:agentweb-core:1.0.1] /Users/yuhuan/.gradle/caches/transforms-3/95e589d8ee72e8634b7e6bca386bf12d/transformed/jetified-agentweb-core-1.0.1/AndroidManifest.xml:15:13-17:59
+526                android:name="android.support.FILE_PROVIDER_PATHS"
+526-->[com.github.xuexiangjys.AgentWeb:agentweb-core:1.0.1] /Users/yuhuan/.gradle/caches/transforms-3/95e589d8ee72e8634b7e6bca386bf12d/transformed/jetified-agentweb-core-1.0.1/AndroidManifest.xml:16:17-67
+527                android:resource="@xml/web_files_paths" />
+527-->[com.github.xuexiangjys.AgentWeb:agentweb-core:1.0.1] /Users/yuhuan/.gradle/caches/transforms-3/95e589d8ee72e8634b7e6bca386bf12d/transformed/jetified-agentweb-core-1.0.1/AndroidManifest.xml:17:17-56
+528        </provider>
+529
+530        <activity
+530-->[com.github.xuexiangjys.AgentWeb:agentweb-core:1.0.1] /Users/yuhuan/.gradle/caches/transforms-3/95e589d8ee72e8634b7e6bca386bf12d/transformed/jetified-agentweb-core-1.0.1/AndroidManifest.xml:20:9-27:20
+531            android:name="com.just.agentweb.action.ActionActivity"
+531-->[com.github.xuexiangjys.AgentWeb:agentweb-core:1.0.1] /Users/yuhuan/.gradle/caches/transforms-3/95e589d8ee72e8634b7e6bca386bf12d/transformed/jetified-agentweb-core-1.0.1/AndroidManifest.xml:21:13-67
+532            android:configChanges="keyboardHidden|orientation|screenSize"
+532-->[com.github.xuexiangjys.AgentWeb:agentweb-core:1.0.1] /Users/yuhuan/.gradle/caches/transforms-3/95e589d8ee72e8634b7e6bca386bf12d/transformed/jetified-agentweb-core-1.0.1/AndroidManifest.xml:22:13-74
+533            android:exported="false"
+533-->[com.github.xuexiangjys.AgentWeb:agentweb-core:1.0.1] /Users/yuhuan/.gradle/caches/transforms-3/95e589d8ee72e8634b7e6bca386bf12d/transformed/jetified-agentweb-core-1.0.1/AndroidManifest.xml:23:13-37
+534            android:launchMode="standard"
+534-->[com.github.xuexiangjys.AgentWeb:agentweb-core:1.0.1] /Users/yuhuan/.gradle/caches/transforms-3/95e589d8ee72e8634b7e6bca386bf12d/transformed/jetified-agentweb-core-1.0.1/AndroidManifest.xml:24:13-42
+535            android:theme="@style/actionActivity"
+535-->[com.github.xuexiangjys.AgentWeb:agentweb-core:1.0.1] /Users/yuhuan/.gradle/caches/transforms-3/95e589d8ee72e8634b7e6bca386bf12d/transformed/jetified-agentweb-core-1.0.1/AndroidManifest.xml:25:13-50
+536            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" >
+536-->[com.github.xuexiangjys.AgentWeb:agentweb-core:1.0.1] /Users/yuhuan/.gradle/caches/transforms-3/95e589d8ee72e8634b7e6bca386bf12d/transformed/jetified-agentweb-core-1.0.1/AndroidManifest.xml:26:13-72
+537        </activity>
+538
+539        <provider
+539-->[me.jessyan:autosize:1.2.1] /Users/yuhuan/.gradle/caches/transforms-3/c1efdf64ac8292e560c5ab4395760aaa/transformed/jetified-autosize-1.2.1/AndroidManifest.xml:12:9-16:43
+540            android:name="me.jessyan.autosize.InitProvider"
+540-->[me.jessyan:autosize:1.2.1] /Users/yuhuan/.gradle/caches/transforms-3/c1efdf64ac8292e560c5ab4395760aaa/transformed/jetified-autosize-1.2.1/AndroidManifest.xml:13:13-60
+541            android:authorities="com.idormy.sms.forwarder.enhanced.debug.autosize-init-provider"
+541-->[me.jessyan:autosize:1.2.1] /Users/yuhuan/.gradle/caches/transforms-3/c1efdf64ac8292e560c5ab4395760aaa/transformed/jetified-autosize-1.2.1/AndroidManifest.xml:14:13-74
+542            android:exported="false"
+542-->[me.jessyan:autosize:1.2.1] /Users/yuhuan/.gradle/caches/transforms-3/c1efdf64ac8292e560c5ab4395760aaa/transformed/jetified-autosize-1.2.1/AndroidManifest.xml:15:13-37
+543            android:multiprocess="true" />
+543-->[me.jessyan:autosize:1.2.1] /Users/yuhuan/.gradle/caches/transforms-3/c1efdf64ac8292e560c5ab4395760aaa/transformed/jetified-autosize-1.2.1/AndroidManifest.xml:16:13-40
+544
+545        <activity
+545-->[com.github.pppscn.XAOP:xaop-runtime:1.1.0] /Users/yuhuan/.gradle/caches/transforms-3/fb600f807ed840dcb7a2e0e8ea6551c8/transformed/jetified-xaop-runtime-1.1.0/AndroidManifest.xml:15:9-19:75
+546            android:name="com.xuexiang.xaop.util.PermissionUtils$PermissionActivity"
+546-->[com.github.pppscn.XAOP:xaop-runtime:1.1.0] /Users/yuhuan/.gradle/caches/transforms-3/fb600f807ed840dcb7a2e0e8ea6551c8/transformed/jetified-xaop-runtime-1.1.0/AndroidManifest.xml:16:13-85
+547            android:configChanges="orientation|keyboardHidden|screenSize"
+547-->[com.github.pppscn.XAOP:xaop-runtime:1.1.0] /Users/yuhuan/.gradle/caches/transforms-3/fb600f807ed840dcb7a2e0e8ea6551c8/transformed/jetified-xaop-runtime-1.1.0/AndroidManifest.xml:17:13-74
+548            android:theme="@style/AOP_Activity_Translucent"
+548-->[com.github.pppscn.XAOP:xaop-runtime:1.1.0] /Users/yuhuan/.gradle/caches/transforms-3/fb600f807ed840dcb7a2e0e8ea6551c8/transformed/jetified-xaop-runtime-1.1.0/AndroidManifest.xml:18:13-60
+549            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+549-->[com.github.pppscn.XAOP:xaop-runtime:1.1.0] /Users/yuhuan/.gradle/caches/transforms-3/fb600f807ed840dcb7a2e0e8ea6551c8/transformed/jetified-xaop-runtime-1.1.0/AndroidManifest.xml:19:13-72
+550        <activity
+550-->[com.github.pppscn.XUtil:xutil-core:2.0.0] /Users/yuhuan/.gradle/caches/transforms-3/6a3e02b421194148d640fd00857c4f7b/transformed/jetified-xutil-core-2.0.0/AndroidManifest.xml:21:9-25:75
+551            android:name="com.xuexiang.xutil.system.PermissionUtils$PermissionActivity"
+551-->[com.github.pppscn.XUtil:xutil-core:2.0.0] /Users/yuhuan/.gradle/caches/transforms-3/6a3e02b421194148d640fd00857c4f7b/transformed/jetified-xutil-core-2.0.0/AndroidManifest.xml:22:13-88
+552            android:configChanges="orientation|keyboardHidden|screenSize"
+552-->[com.github.pppscn.XUtil:xutil-core:2.0.0] /Users/yuhuan/.gradle/caches/transforms-3/6a3e02b421194148d640fd00857c4f7b/transformed/jetified-xutil-core-2.0.0/AndroidManifest.xml:23:13-74
+553            android:theme="@style/XUtil_Activity_Translucent"
+553-->[com.github.pppscn.XUtil:xutil-core:2.0.0] /Users/yuhuan/.gradle/caches/transforms-3/6a3e02b421194148d640fd00857c4f7b/transformed/jetified-xutil-core-2.0.0/AndroidManifest.xml:24:13-62
+554            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+554-->[com.github.pppscn.XUtil:xutil-core:2.0.0] /Users/yuhuan/.gradle/caches/transforms-3/6a3e02b421194148d640fd00857c4f7b/transformed/jetified-xutil-core-2.0.0/AndroidManifest.xml:25:13-72
+555
+556        <provider
+556-->[com.github.pppscn.XUtil:xutil-core:2.0.0] /Users/yuhuan/.gradle/caches/transforms-3/6a3e02b421194148d640fd00857c4f7b/transformed/jetified-xutil-core-2.0.0/AndroidManifest.xml:27:9-35:20
+557            android:name="androidx.core.content.FileProvider4Utils"
+557-->[com.github.pppscn.XUtil:xutil-core:2.0.0] /Users/yuhuan/.gradle/caches/transforms-3/6a3e02b421194148d640fd00857c4f7b/transformed/jetified-xutil-core-2.0.0/AndroidManifest.xml:28:13-68
+558            android:authorities="com.idormy.sms.forwarder.enhanced.debug.xutil.provider"
+558-->[com.github.pppscn.XUtil:xutil-core:2.0.0] /Users/yuhuan/.gradle/caches/transforms-3/6a3e02b421194148d640fd00857c4f7b/transformed/jetified-xutil-core-2.0.0/AndroidManifest.xml:29:13-66
+559            android:exported="false"
+559-->[com.github.pppscn.XUtil:xutil-core:2.0.0] /Users/yuhuan/.gradle/caches/transforms-3/6a3e02b421194148d640fd00857c4f7b/transformed/jetified-xutil-core-2.0.0/AndroidManifest.xml:30:13-37
+560            android:grantUriPermissions="true" >
+560-->[com.github.pppscn.XUtil:xutil-core:2.0.0] /Users/yuhuan/.gradle/caches/transforms-3/6a3e02b421194148d640fd00857c4f7b/transformed/jetified-xutil-core-2.0.0/AndroidManifest.xml:31:13-47
+561            <meta-data
+561-->[com.github.xuexiangjys.AgentWeb:agentweb-core:1.0.1] /Users/yuhuan/.gradle/caches/transforms-3/95e589d8ee72e8634b7e6bca386bf12d/transformed/jetified-agentweb-core-1.0.1/AndroidManifest.xml:15:13-17:59
+562                android:name="android.support.FILE_PROVIDER_PATHS"
+562-->[com.github.xuexiangjys.AgentWeb:agentweb-core:1.0.1] /Users/yuhuan/.gradle/caches/transforms-3/95e589d8ee72e8634b7e6bca386bf12d/transformed/jetified-agentweb-core-1.0.1/AndroidManifest.xml:16:17-67
+563                android:resource="@xml/xutil_provider_paths" />
+563-->[com.github.xuexiangjys.AgentWeb:agentweb-core:1.0.1] /Users/yuhuan/.gradle/caches/transforms-3/95e589d8ee72e8634b7e6bca386bf12d/transformed/jetified-agentweb-core-1.0.1/AndroidManifest.xml:17:17-56
+564        </provider>
+565
+566        <service
+566-->[com.github.pppscn:XUpdate:2.1.5] /Users/yuhuan/.gradle/caches/transforms-3/fa95181ee32e21e56a1a10106d60ac96/transformed/jetified-XUpdate-2.1.5/AndroidManifest.xml:22:9-24:40
+567            android:name="com.xuexiang.xupdate.service.DownloadService"
+567-->[com.github.pppscn:XUpdate:2.1.5] /Users/yuhuan/.gradle/caches/transforms-3/fa95181ee32e21e56a1a10106d60ac96/transformed/jetified-XUpdate-2.1.5/AndroidManifest.xml:23:13-72
+568            android:exported="false" />
+568-->[com.github.pppscn:XUpdate:2.1.5] /Users/yuhuan/.gradle/caches/transforms-3/fa95181ee32e21e56a1a10106d60ac96/transformed/jetified-XUpdate-2.1.5/AndroidManifest.xml:24:13-37
+569
+570        <provider
+570-->[com.github.pppscn:XUpdate:2.1.5] /Users/yuhuan/.gradle/caches/transforms-3/fa95181ee32e21e56a1a10106d60ac96/transformed/jetified-XUpdate-2.1.5/AndroidManifest.xml:26:9-34:20
+571            android:name="com.xuexiang.xupdate.utils.UpdateFileProvider"
+571-->[com.github.pppscn:XUpdate:2.1.5] /Users/yuhuan/.gradle/caches/transforms-3/fa95181ee32e21e56a1a10106d60ac96/transformed/jetified-XUpdate-2.1.5/AndroidManifest.xml:27:13-73
+572            android:authorities="com.idormy.sms.forwarder.enhanced.debug.updateFileProvider"
+572-->[com.github.pppscn:XUpdate:2.1.5] /Users/yuhuan/.gradle/caches/transforms-3/fa95181ee32e21e56a1a10106d60ac96/transformed/jetified-XUpdate-2.1.5/AndroidManifest.xml:28:13-70
+573            android:exported="false"
+573-->[com.github.pppscn:XUpdate:2.1.5] /Users/yuhuan/.gradle/caches/transforms-3/fa95181ee32e21e56a1a10106d60ac96/transformed/jetified-XUpdate-2.1.5/AndroidManifest.xml:29:13-37
+574            android:grantUriPermissions="true" >
+574-->[com.github.pppscn:XUpdate:2.1.5] /Users/yuhuan/.gradle/caches/transforms-3/fa95181ee32e21e56a1a10106d60ac96/transformed/jetified-XUpdate-2.1.5/AndroidManifest.xml:30:13-47
+575            <meta-data
+575-->[com.github.xuexiangjys.AgentWeb:agentweb-core:1.0.1] /Users/yuhuan/.gradle/caches/transforms-3/95e589d8ee72e8634b7e6bca386bf12d/transformed/jetified-agentweb-core-1.0.1/AndroidManifest.xml:15:13-17:59
+576                android:name="android.support.FILE_PROVIDER_PATHS"
+576-->[com.github.xuexiangjys.AgentWeb:agentweb-core:1.0.1] /Users/yuhuan/.gradle/caches/transforms-3/95e589d8ee72e8634b7e6bca386bf12d/transformed/jetified-agentweb-core-1.0.1/AndroidManifest.xml:16:17-67
+577                android:resource="@xml/update_file_paths" />
+577-->[com.github.xuexiangjys.AgentWeb:agentweb-core:1.0.1] /Users/yuhuan/.gradle/caches/transforms-3/95e589d8ee72e8634b7e6bca386bf12d/transformed/jetified-agentweb-core-1.0.1/AndroidManifest.xml:17:17-56
+578        </provider>
+579
+580        <activity
+580-->[com.github.pppscn:XUpdate:2.1.5] /Users/yuhuan/.gradle/caches/transforms-3/fa95181ee32e21e56a1a10106d60ac96/transformed/jetified-XUpdate-2.1.5/AndroidManifest.xml:36:9-39:58
+581            android:name="com.xuexiang.xupdate.widget.UpdateDialogActivity"
+581-->[com.github.pppscn:XUpdate:2.1.5] /Users/yuhuan/.gradle/caches/transforms-3/fa95181ee32e21e56a1a10106d60ac96/transformed/jetified-XUpdate-2.1.5/AndroidManifest.xml:37:13-76
+582            android:exported="false"
+582-->[com.github.pppscn:XUpdate:2.1.5] /Users/yuhuan/.gradle/caches/transforms-3/fa95181ee32e21e56a1a10106d60ac96/transformed/jetified-XUpdate-2.1.5/AndroidManifest.xml:38:13-37
+583            android:theme="@style/XUpdate_DialogTheme" />
+583-->[com.github.pppscn:XUpdate:2.1.5] /Users/yuhuan/.gradle/caches/transforms-3/fa95181ee32e21e56a1a10106d60ac96/transformed/jetified-XUpdate-2.1.5/AndroidManifest.xml:39:13-55
+584    </application>
+585
+586</manifest>

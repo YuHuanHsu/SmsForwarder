@@ -1,0 +1,72 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "SHRUNK_PROCESSED_RES",
+    "kind": "Directory"
+  },
+  "applicationId": "com.idormy.sms.forwarder.enhanced.debug",
+  "variantName": "debug",
+  "elements": [
+    {
+      "type": "UNIVERSAL",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 100055,
+      "versionName": "3.4.0-enhanced.250904",
+      "outputFile": "resources-universal-debug-stripped.ap_"
+    },
+    {
+      "type": "ONE_OF_MANY",
+      "filters": [
+        {
+          "filterType": "ABI",
+          "value": "x86"
+        }
+      ],
+      "attributes": [],
+      "versionCode": 400055,
+      "versionName": "3.4.0-enhanced.250904",
+      "outputFile": "resources-x86-debug-stripped.ap_"
+    },
+    {
+      "type": "ONE_OF_MANY",
+      "filters": [
+        {
+          "filterType": "ABI",
+          "value": "armeabi-v7a"
+        }
+      ],
+      "attributes": [],
+      "versionCode": 200055,
+      "versionName": "3.4.0-enhanced.250904",
+      "outputFile": "resources-armeabi-v7a-debug-stripped.ap_"
+    },
+    {
+      "type": "ONE_OF_MANY",
+      "filters": [
+        {
+          "filterType": "ABI",
+          "value": "arm64-v8a"
+        }
+      ],
+      "attributes": [],
+      "versionCode": 300055,
+      "versionName": "3.4.0-enhanced.250904",
+      "outputFile": "resources-arm64-v8a-debug-stripped.ap_"
+    },
+    {
+      "type": "ONE_OF_MANY",
+      "filters": [
+        {
+          "filterType": "ABI",
+          "value": "x86_64"
+        }
+      ],
+      "attributes": [],
+      "versionCode": 500055,
+      "versionName": "3.4.0-enhanced.250904",
+      "outputFile": "resources-x86_64-debug-stripped.ap_"
+    }
+  ],
+  "elementType": "File"
+}

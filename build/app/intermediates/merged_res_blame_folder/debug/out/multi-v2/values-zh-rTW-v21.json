@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.idormy.sms.forwarder.app-mergeDebugResources-76:/values-zh-rTW-v21/values-zh-rTW-v21.xml",
+            "map": [
+                {
+                    "source": "/Users/yuhuan/Documents/Projects/SmsForwarder/app/src/main/res/values-zh-rTW-v21/styles.xml",
+                    "from": {
+                        "startLines": "9,19,32,39,66,58,75,3",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "328,804,1415,1712,2923,2568,3338,89",
+                        "endLines": "17,29,36,56,73,64,82,6",
+                        "endColumns": "12,12,12,12,12,12,12,12",
+                        "endOffsets": "798,1366,1660,2562,3332,2917,3748,285"
+                    },
+                    "to": {
+                        "startLines": "2,11,22,27,45,53,60,68",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "100,490,1053,1290,1993,2407,2761,3176",
+                        "endLines": "10,21,26,44,52,59,67,71",
+                        "endColumns": "12,12,12,12,12,12,12,12",
+                        "endOffsets": "485,1048,1285,1988,2402,2756,3171,3352"
+                    }
+                }
+            ]
+        }
+    ]
+}

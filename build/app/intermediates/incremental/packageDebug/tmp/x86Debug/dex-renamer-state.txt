@@ -1,0 +1,13 @@
+#Thu Sep 04 17:22:21 ICT 2025
+path.3=classes4.dex
+path.2=classes3.dex
+path.1=classes2.dex
+path.0=classes.dex
+base.3=/Users/yuhuan/Documents/Projects/SmsForwarder/build/app/intermediates/dex/debug/minifyDebugWithR8/classes4.dex
+base.2=/Users/yuhuan/Documents/Projects/SmsForwarder/build/app/intermediates/dex/debug/minifyDebugWithR8/classes3.dex
+base.1=/Users/yuhuan/Documents/Projects/SmsForwarder/build/app/intermediates/dex/debug/minifyDebugWithR8/classes2.dex
+base.0=/Users/yuhuan/Documents/Projects/SmsForwarder/build/app/intermediates/dex/debug/minifyDebugWithR8/classes.dex
+renamed.3=classes4.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex

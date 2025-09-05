@@ -1,0 +1,402 @@
+[
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_tasks_action_settings.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_tasks_action_settings.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_tasks_action_frpc.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_tasks_action_frpc.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_client_battery_query.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_client_battery_query.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/layout_widget_item.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/layout_widget_item.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/adapter_logs_card_view_list_item.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/adapter_logs_card_view_list_item.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_senders_email.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_senders_email.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/item_setting.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/item_setting.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_tasks_action_alarm.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_tasks_action_alarm.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_senders.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_senders.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_senders_dingtalk_group_robot.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_senders_dingtalk_group_robot.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_tasks_action_resend.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_tasks_action_resend.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/activity_agent_web.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/activity_agent_web.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_tasks_action_sender.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_tasks_action_sender.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_service_protocol.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_service_protocol.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_senders_pushplus.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_senders_pushplus.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_tasks.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_tasks.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/adapter_senders_card_view_list_item.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/adapter_senders_card_view_list_item.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/adapter_task_setting_item.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/adapter_task_setting_item.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_tasks_action_task.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_tasks_action_task.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/adapter_rules_card_view_list_item.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/adapter_rules_card_view_list_item.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_client_wol_send.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_client_wol_send.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/adapter_contact_card_view_list_item.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/adapter_contact_card_view_list_item.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_tasks_action_cleaner.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_tasks_action_cleaner.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_tasks_edit.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_tasks_edit.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/adapter_app_list_item.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/adapter_app_list_item.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_tasks_condition_leave_address.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_tasks_condition_leave_address.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_client_location.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_client_location.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/adapter_task_list_item.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/adapter_task_list_item.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_rules_edit.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_rules_edit.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/adapter_call_card_view_list_item.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/adapter_call_card_view_list_item.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_tasks_action_rule.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_tasks_action_rule.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/activity_main.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_senders_gotify.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_senders_gotify.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_server.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_server.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_tasks_action_notification.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_tasks_action_notification.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_tasks_condition_cron.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_tasks_condition_cron.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_frpc_edit.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_frpc_edit.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/item_spinner_with_icon.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/item_spinner_with_icon.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_agentweb.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_agentweb.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_tasks_condition_battery.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_tasks_condition_battery.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/adapter_sender_list_item.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/adapter_sender_list_item.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/item_add_recipient.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/item_add_recipient.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_tasks_condition_to_address.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_tasks_condition_to_address.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_senders_feishu.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_senders_feishu.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_senders_socket.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_senders_socket.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_tasks_condition_lock_screen.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_tasks_condition_lock_screen.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/item_sender.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/item_sender.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/dialog_task_condition_bottom_sheet.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/dialog_task_condition_bottom_sheet.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_senders_wework_agent.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_senders_wework_agent.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_senders_sms.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_senders_sms.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_tasks_condition_charge.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_tasks_condition_charge.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/dialog_rule_test.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/dialog_rule_test.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_senders_wework_robot.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_senders_wework_robot.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_logs.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_logs.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_client_sms_send.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_client_sms_send.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_senders_feishu_app.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_senders_feishu_app.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/dialog_guide_tips.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/dialog_guide_tips.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_app_list.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_app_list.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_client_clone.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_client_clone.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/adapter_rule_list_item.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/adapter_rule_list_item.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/adapter_bluetooth_list_item.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/adapter_bluetooth_list_item.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/include_navigation_header.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/include_navigation_header.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/adapter_frpc_list_item.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/adapter_frpc_list_item.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/adapter_item_simple_list.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/adapter_item_simple_list.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/dialog_frpc_save.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/dialog_frpc_save.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_client.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_client.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/include_toolbar_web.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/include_toolbar_web.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_senders_telegram.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_senders_telegram.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_logcat.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_logcat.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/adapter_tasks_card_view_list_item.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/adapter_tasks_card_view_list_item.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_tasks_condition_msg.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_tasks_condition_msg.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_tasks_condition_network.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_tasks_condition_network.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_senders_dingtalk_inner_robot.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_senders_dingtalk_inner_robot.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_senders_serverchan.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_senders_serverchan.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/dialog_sender_bottom_sheet.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/dialog_sender_bottom_sheet.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_client_sms_query.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_client_sms_query.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_tasks_action_send_sms.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_tasks_action_send_sms.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/menu_left_drawer.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/menu_left_drawer.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/adapter_frpcs_card_view_list_item.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/adapter_frpcs_card_view_list_item.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/dialog_task_action_bottom_sheet.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/dialog_task_action_bottom_sheet.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_client_contact_query.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_client_contact_query.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_tasks_condition_bluetooth.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_tasks_condition_bluetooth.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_tasks_action_http_server.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_tasks_action_http_server.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/item_logs.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/item_logs.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_tasks_condition_sim.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_tasks_condition_sim.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/menu_item_option.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/menu_item_option.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_client_call_query.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_client_call_query.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/item_add_header.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/item_add_header.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_frpcs.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_frpcs.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_settings.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_settings.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/dialog_logs_filter.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/dialog_logs_filter.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/adapter_sms_card_view_list_item.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/adapter_sms_card_view_list_item.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_rules.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_rules.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_client_contact_add.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_client_contact_add.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_senders_webhook.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_senders_webhook.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_pulldown_web.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_pulldown_web.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_markdown.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_markdown.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_senders_url_scheme.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_senders_url_scheme.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_senders_bark.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_senders_bark.xml"
+    },
+    {
+        "merged": "com.idormy.sms.forwarder.app-mergeDebugResources-77:/layout/fragment_about.xml",
+        "source": "com.idormy.sms.forwarder.app-main-72:/layout/fragment_about.xml"
+    }
+]
