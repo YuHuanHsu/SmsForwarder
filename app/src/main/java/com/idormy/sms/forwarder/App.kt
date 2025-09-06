@@ -24,7 +24,6 @@ import com.hjq.language.OnLanguageListener
 import com.idormy.sms.forwarder.activity.MainActivity
 import com.idormy.sms.forwarder.core.Core
 import com.idormy.sms.forwarder.database.AppDatabase
-import com.idormy.sms.forwarder.database.repository.FrpcRepository
 import com.idormy.sms.forwarder.database.repository.LogsRepository
 import com.idormy.sms.forwarder.database.repository.MsgRepository
 import com.idormy.sms.forwarder.database.repository.RuleRepository
@@ -58,7 +57,6 @@ import com.idormy.sms.forwarder.utils.sdkinit.XUpdateInit
 import com.idormy.sms.forwarder.utils.tinker.TinkerLoadLibrary
 import com.king.location.LocationClient
 import com.xuexiang.xutil.file.FileUtils
-import frpclib.Frpclib
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
@@ -80,7 +78,6 @@ class App : Application(), CactusCallback, Configuration.Provider by Core {
 
     val applicationScope = CoroutineScope(SupervisorJob())
     val database by lazy { AppDatabase.getInstance(this) }
-    val frpcRepository by lazy { FrpcRepository(database.frpcDao()) }
     val msgRepository by lazy { MsgRepository(database.msgDao()) }
     val logsRepository by lazy { LogsRepository(database.logsDao()) }
     val ruleRepository by lazy { RuleRepository(database.ruleDao()) }
@@ -136,8 +133,6 @@ class App : Application(), CactusCallback, Configuration.Provider by Core {
         val Geocoder by lazy { Geocoder(context) }
         val DateFormat by lazy { SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()) }
 
-        //Frpclib是否已经初始化
-        var FrpclibInited = false
 
         //是否需要在拼接字符串时添加空格
         var isNeedSpaceBetweenWords = false
@@ -191,7 +186,7 @@ class App : Application(), CactusCallback, Configuration.Provider by Core {
             if (soFile.exists()) {
                 try {
                     TinkerLoadLibrary.installNativeLibraryPath(classLoader, soFile)
-                    FrpclibInited = FileUtils.isFileExists(filesDir.absolutePath + "/libs/libgojni.so") && FRPC_LIB_VERSION == Frpclib.getVersion()
+                    // FRPC library initialization removed
                 } catch (throwable: Throwable) {
                     Log.e("APP", throwable.message.toString())
                 }

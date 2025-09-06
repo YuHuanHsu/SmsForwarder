@@ -46,7 +46,6 @@ import com.idormy.sms.forwarder.utils.task.CronJobScheduler
 import com.idormy.sms.forwarder.workers.LoadAppListWorker
 import com.jeremyliao.liveeventbus.LiveEventBus
 import com.xuexiang.xutil.XUtil
-import frpclib.Frpclib
 import io.reactivex.Single
 import io.reactivex.SingleObserver
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -66,33 +65,12 @@ class ForegroundService : Service() {
     private var notificationManager: NotificationManager? = null
 
     private val compositeDisposable = CompositeDisposable()
+    // FRPC observer removed - FRPC functionality disabled
+    /*
     private val frpcObserver = Observer { uid: String ->
-        if (!App.FrpclibInited || Frpclib.isRunning(uid)) return@Observer
-
-        Core.frpc.get(uid).flatMap { (uid1, _, config) ->
-            val error = Frpclib.runContent(uid1, config)
-            Single.just(error)
-        }.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(object : SingleObserver<String> {
-            override fun onSubscribe(d: Disposable) {
-                compositeDisposable.add(d)
-            }
-
-            override fun onError(e: Throwable) {
-                e.printStackTrace()
-                Log.e(TAG, "onError: ${e.message}")
-                LiveEventBus.get(EVENT_FRPC_RUNNING_ERROR, String::class.java).post(uid)
-            }
-
-            override fun onSuccess(msg: String) {
-                if (!TextUtils.isEmpty(msg)) {
-                    Log.e(TAG, msg)
-                    LiveEventBus.get(EVENT_FRPC_RUNNING_ERROR, String::class.java).post(uid)
-                } else {
-                    LiveEventBus.get(EVENT_FRPC_RUNNING_SUCCESS, String::class.java).post(uid)
-                }
-            }
-        })
+        // FRPC functionality has been removed
     }
+    */
 
     // 振动控制
     private lateinit var vibrationUtils: VibrationUtils
@@ -289,31 +267,16 @@ class ForegroundService : Service() {
                 WorkManager.getInstance(XUtil.getContext()).enqueue(request)
             }
 
+            // FRPC functionality removed
+            /*
             //启动 Frpc
             if (App.FrpclibInited) {
                 //监听Frpc启动指令
                 LiveEventBus.get(INTENT_FRPC_APPLY_FILE, String::class.java).observeForever(frpcObserver)
                 //自启动的Frpc
-                GlobalScope.async(Dispatchers.IO) {
-                    val frpcList = Core.frpc.getAutorun()
-
-                    if (frpcList.isEmpty()) {
-                        Log.d(TAG, "没有自启动的Frpc")
-                        return@async
-                    }
-
-                    for (frpc in frpcList) {
-                        Log.d(TAG, "自启动的Frpc: $frpc")
-                        GlobalScope.async(Dispatchers.IO) {
-                            val error = Frpclib.runContent(frpc.uid, frpc.config)
-                            Log.d(TAG, "自启动的Frpc: uid=${frpc.uid}, error=$error")
-                            if (!TextUtils.isEmpty(error)) {
-                                Log.e(TAG, error)
-                            }
-                        }
-                    }
-                }
+                // ... FRPC startup code removed
             }
+            */
 
             //播放警报
             LiveEventBus.get<AlarmSetting>(EVENT_ALARM_ACTION).observeForever(alarmObserver)

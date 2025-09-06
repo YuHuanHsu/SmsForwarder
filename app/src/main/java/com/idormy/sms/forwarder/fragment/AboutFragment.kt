@@ -27,7 +27,6 @@ import com.xuexiang.xui.widget.actionbar.TitleBar
 import com.xuexiang.xui.widget.dialog.materialdialog.DialogAction
 import com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog
 import com.xuexiang.xui.widget.textview.supertextview.SuperTextView
-import frpclib.Frpclib
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -56,10 +55,8 @@ class AboutFragment : BaseFragment<FragmentAboutBinding?>(), SuperTextView.OnSup
         binding!!.menuVersion.setLeftString(String.format(resources.getString(R.string.about_app_version), AppUtils.getAppVersionName()))
         binding!!.menuCache.setLeftString(String.format(resources.getString(R.string.about_cache_size), CacheUtils.getTotalCacheSize(requireContext())))
 
-        if (App.FrpclibInited) {
-            binding!!.menuFrpc.setLeftString(String.format(resources.getString(R.string.about_frpc_version), Frpclib.getVersion()))
-            binding!!.menuFrpc.visibility = View.VISIBLE
-        }
+        // FRPC functionality removed
+        binding!!.menuFrpc.visibility = View.GONE
 
         val dateFormat = SimpleDateFormat("yyyy", Locale.CHINA)
         val currentYear = dateFormat.format(Date())

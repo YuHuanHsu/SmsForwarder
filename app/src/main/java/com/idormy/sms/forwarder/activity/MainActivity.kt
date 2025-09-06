@@ -256,26 +256,8 @@ class MainActivity : BaseActivity<ActivityMainBinding?>(), DrawerAdapter.OnItemS
             POS_SERVER -> openNewPage(ServerFragment::class.java)
             POS_CLIENT -> openNewPage(ClientFragment::class.java)
             POS_FRPC -> {
-                if (App.FrpclibInited) {
-                    openNewPage(FrpcFragment::class.java)
-                    return
-                }
-
-                val title = if (!FileUtils.isFileExists(filesDir.absolutePath + "/libs/libgojni.so")) {
-                    String.format(getString(R.string.frpclib_download_title), FRPC_LIB_VERSION)
-                } else {
-                    getString(R.string.frpclib_version_mismatch)
-                }
-
-                MaterialDialog.Builder(this)
-                    .title(title)
-                    .content(R.string.download_frpc_tips)
-                    .positiveText(R.string.lab_yes)
-                    .negativeText(R.string.lab_no)
-                    .onPositive { _: MaterialDialog?, _: DialogAction? ->
-                        downloadFrpcLib()
-                    }
-                    .show()
+                // FRPC functionality has been removed
+                XToastUtils.info("FRPC 功能已移除")
             }
 
             POS_APPS -> {
