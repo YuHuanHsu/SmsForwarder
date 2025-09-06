@@ -132,10 +132,10 @@ android {
             // 调试模式开关
             debuggable true
             jniDebuggable true
-            // 移除无用的资源
-            shrinkResources true
-            // 代码混淆开关
-            minifyEnabled true
+            // 移除无用的资源 - disabled for debug
+            shrinkResources false
+            // 代码混淆开关 - disabled for debug
+            minifyEnabled false
             // 混淆配置
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             if (isNeedPackage.toBoolean()) {
@@ -251,8 +251,8 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    //frpc
-    implementation files('libs/frpclib.aar')
+    //frpc - removed as FRPC functionality is disabled
+    // implementation files('libs/frpclib.aar')
 
     //MQTT协议
     implementation("org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.5")
