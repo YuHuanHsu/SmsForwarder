@@ -591,5 +591,36 @@ class BackupUtils private constructor() {
                 name.endsWith(".smsf") || name.endsWith(".json")
             }?.sortedByDescending { it.lastModified() } ?: emptyList()
         }
+
+        fun getBackupInfoFromFile(filePath: String): BackupInfo? {
+            return try {
+                val file = File(filePath)
+                if (!file.exists()) return null
+                val jsonString = FileIOUtils.readFile2String(file)
+                if (jsonString.isNullOrEmpty()) return null
+
+                val gson = Gson()
+                // New backup format uses BackupInfo
+                if (jsonString.contains("\"backup_type\"")) {
+                    return gson.fromJson(jsonString, BackupInfo::class.java)
+                }
+
+                // Legacy format uses CloneInfo, convert it to BackupInfo
+                val cloneInfo = gson.fromJson(jsonString, CloneInfo::class.java)
+                if (cloneInfo != null) {
+                    return BackupInfo(
+                        versionCode = cloneInfo.versionCode,
+                        versionName = cloneInfo.versionName,
+                        backupTime = "N/A", // Legacy format doesn't have this
+                        backupType = "all",
+                        backupDescription = "舊版完整備份" // Legacy full backup
+                    )
+                }
+                null
+            } catch (e: Exception) {
+                Log.e(TAG, "Failed to get backup info from file: ${e.message}")
+                null
+            }
+        }
     }
 }

@@ -1257,10 +1257,20 @@
     <string name="backup_senders">發送通道</string>
     <string name="backup_rules">轉發規則</string>
     <string name="backup_tasks">自動任務</string>
+    
+    <!-- 備份頁面相關 -->
+    <string name="backup_files_status">備份檔案狀態</string>
+    <string name="backup_files_info" formatted="false">共 %d 個備份檔案，總計 %s</string>
+    <string name="export_settings_desc">將當前設定匯出為備份檔案</string>
+    <string name="import_settings_desc">從備份檔案還原設定</string>
     <string name="select_backup_category">選擇備份類別</string>
+    <string name="select_backup_file">選擇備份檔案</string>
     <string name="select_import_file">選擇匯入檔案</string>
-    <string name="category_export_success" formatted="false">%s已成功匯出到：%s</string>
-    <string name="category_export_failed">%s匯出失敗</string>
+    <string name="category_export_success" formatted="false">%s 已成功匯出到：%s</string>
+    <string name="category_export_failed">%s 匯出失敗</string>
+    <string name="backup_help_title">使用說明</string>
+    <string name="backup_help_content" formatted="false">• 匯出設定：將當前所有設定保存為備份檔案\n• 匯入設定：從備份檔案恢復設定\n• 支援分類備份：可單獨備份發送通道、轉發規則等\n• 備份檔案存放在 /storage/emulated/0/SmsForwarder/</string>
+    <string name="open_backup_page">開啟備份頁面</string>
     <string name="category_import_success">%s已成功匯入</string>
     <string name="category_import_failed" formatted="false">%s匯入失敗：%s</string>
     <string name="backup_confirm_category_import" formatted="false">匯入%s會覆蓋當前的%s設定，是否繼續？</string>

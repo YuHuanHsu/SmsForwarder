@@ -18,7 +18,6 @@ import com.idormy.sms.forwarder.entity.MsgInfo
 import com.idormy.sms.forwarder.entity.TaskSetting
 import com.idormy.sms.forwarder.entity.action.AlarmSetting
 import com.idormy.sms.forwarder.entity.action.CleanerSetting
-import com.idormy.sms.forwarder.entity.action.FrpcSetting
 import com.idormy.sms.forwarder.entity.action.HttpServerSetting
 import com.idormy.sms.forwarder.entity.action.ResendSetting
 import com.idormy.sms.forwarder.entity.action.RuleSetting
@@ -43,7 +42,6 @@ import com.idormy.sms.forwarder.utils.SendUtils
 import com.idormy.sms.forwarder.utils.SettingUtils
 import com.idormy.sms.forwarder.utils.TASK_ACTION_ALARM
 import com.idormy.sms.forwarder.utils.TASK_ACTION_CLEANER
-import com.idormy.sms.forwarder.utils.TASK_ACTION_FRPC
 import com.idormy.sms.forwarder.utils.TASK_ACTION_HTTPSERVER
 import com.idormy.sms.forwarder.utils.TASK_ACTION_NOTIFICATION
 import com.idormy.sms.forwarder.utils.TASK_ACTION_RESEND
@@ -58,7 +56,6 @@ import com.jeremyliao.liveeventbus.LiveEventBus
 import com.xuexiang.xrouter.utils.TextUtils
 import com.xuexiang.xutil.XUtil
 import com.xuexiang.xutil.resource.ResUtils.getString
-import frpclib.Frpclib
 import java.util.Calendar
 
 //执行每个task具体动作任务
@@ -219,44 +216,6 @@ class ActionWorker(context: Context, params: WorkerParameters) : CoroutineWorker
                         writeLog(String.format(getString(R.string.successful_execution), settingsSetting.description), "SUCCESS")
                     }
 
-                    TASK_ACTION_FRPC -> {
-                        if (!App.FrpclibInited) {
-                            writeLog("还未下载Frpc库")
-                            continue
-                        }
-                        val frpcSetting = Gson().fromJson(action.setting, FrpcSetting::class.java)
-                        if (frpcSetting == null) {
-                            writeLog("frpcSetting is null")
-                            continue
-                        }
-
-                        val frpcList = frpcSetting.frpcList.ifEmpty {
-                            Core.frpc.getAutorun()
-                        }
-
-                        if (frpcList.isEmpty()) {
-                            writeLog("没有需要操作的Frpc")
-                            continue
-                        }
-
-                        for (frpc in frpcList) {
-                            if (frpcSetting.action == "start") {
-                                if (!Frpclib.isRunning(frpc.uid)) {
-                                    val error = Frpclib.runContent(frpc.uid, frpc.config)
-                                    if (!TextUtils.isEmpty(error)) {
-                                        Log.e(TAG, error)
-                                    }
-                                }
-                            } else if (frpcSetting.action == "stop") {
-                                if (Frpclib.isRunning(frpc.uid)) {
-                                    Frpclib.close(frpc.uid)
-                                }
-                            }
-                        }
-
-                        successNum++
-                        writeLog(String.format(getString(R.string.successful_execution), frpcSetting.description), "SUCCESS")
-                    }
 
                     TASK_ACTION_HTTPSERVER -> {
                         val httpServerSetting = Gson().fromJson(action.setting, HttpServerSetting::class.java)

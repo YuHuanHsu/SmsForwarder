@@ -229,7 +229,7 @@ class CloneFragment : BaseFragment<FragmentClientCloneBinding?>(), View.OnClickL
                     val cloneInfo = gson.fromJson(jsonStr, CloneInfo::class.java)
                     Log.d(TAG, "cloneInfo = $cloneInfo")
 
-                    //判断版本是否一致
+                    //判断版本是否一致，顯示提示但允許繼續
                     HttpServerUtils.compareVersion(cloneInfo)
 
                     if (HttpServerUtils.restoreSettings(cloneInfo)) {
@@ -457,7 +457,7 @@ class CloneFragment : BaseFragment<FragmentClientCloneBinding?>(), View.OnClickL
                             return
                         }
 
-                        //判断版本是否一致
+                        //判断版本是否一致，顯示提示但允許繼續
                         HttpServerUtils.compareVersion(cloneInfo)
 
                         if (HttpServerUtils.restoreSettings(cloneInfo)) {

@@ -25,7 +25,6 @@ import com.idormy.sms.forwarder.utils.SP_WIFI_SSID
 import com.idormy.sms.forwarder.utils.SharedPreference
 import com.idormy.sms.forwarder.utils.TASK_ACTION_ALARM
 import com.idormy.sms.forwarder.utils.TASK_ACTION_CLEANER
-import com.idormy.sms.forwarder.utils.TASK_ACTION_FRPC
 import com.idormy.sms.forwarder.utils.TASK_ACTION_HTTPSERVER
 import com.idormy.sms.forwarder.utils.TASK_ACTION_NOTIFICATION
 import com.idormy.sms.forwarder.utils.TASK_ACTION_RESEND
@@ -73,7 +72,6 @@ class TaskUtils private constructor() {
                 TASK_ACTION_NOTIFICATION -> R.drawable.auto_task_icon_notification
                 TASK_ACTION_CLEANER -> R.drawable.auto_task_icon_cleaner
                 TASK_ACTION_SETTINGS -> R.drawable.auto_task_icon_settings
-                TASK_ACTION_FRPC -> R.drawable.auto_task_icon_frpc
                 TASK_ACTION_HTTPSERVER -> R.drawable.auto_task_icon_http_server
                 TASK_ACTION_RULE -> R.drawable.auto_task_icon_rule
                 TASK_ACTION_SENDER -> R.drawable.auto_task_icon_sender
@@ -103,7 +101,6 @@ class TaskUtils private constructor() {
                 TASK_ACTION_NOTIFICATION -> R.drawable.auto_task_icon_notification_grey
                 TASK_ACTION_CLEANER -> R.drawable.auto_task_icon_cleaner_grey
                 TASK_ACTION_SETTINGS -> R.drawable.auto_task_icon_settings_grey
-                TASK_ACTION_FRPC -> R.drawable.auto_task_icon_frpc_grey
                 TASK_ACTION_HTTPSERVER -> R.drawable.auto_task_icon_http_server_grey
                 TASK_ACTION_RULE -> R.drawable.auto_task_icon_rule_grey
                 TASK_ACTION_SENDER -> R.drawable.auto_task_icon_sender_grey

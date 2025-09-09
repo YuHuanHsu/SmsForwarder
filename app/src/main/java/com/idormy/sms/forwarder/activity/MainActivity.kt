@@ -79,8 +79,8 @@ class MainActivity : BaseActivity<ActivityMainBinding?>(), DrawerAdapter.OnItemS
     private val POS_CLIENT = 7
     private val POS_FRPC = 8
     private val POS_APPS = 9
-    private val POS_HELP = 11 //10为空行
-    private val POS_ABOUT = 12
+    private val POS_HELP = 10
+    private val POS_ABOUT = 11
     private var needToAppListFragment = false
 
     private lateinit var mTabLayout: TabLayout
@@ -289,11 +289,15 @@ class MainActivity : BaseActivity<ActivityMainBinding?>(), DrawerAdapter.OnItemS
     }
 
     private fun createItemFor(position: Int): DrawerItem<*> {
-        return SimpleItem(mMenuIcons[position], mMenuTitles[position])
-            .withIconTint(ThemeUtils.resolveColor(this, R.attr.xui_config_color_content_text))
-            .withTextTint(ThemeUtils.resolveColor(this, R.attr.xui_config_color_content_text))
-            .withSelectedIconTint(ThemeUtils.getMainThemeColor(this))
-            .withSelectedTextTint(ThemeUtils.getMainThemeColor(this))
+        return if (mMenuTitles[position].isNullOrEmpty()) {
+            SpaceItem(16)
+        } else {
+            SimpleItem(mMenuIcons[position], mMenuTitles[position])
+                .withIconTint(ThemeUtils.resolveColor(this, R.attr.xui_config_color_content_text))
+                .withTextTint(ThemeUtils.resolveColor(this, R.attr.xui_config_color_content_text))
+                .withSelectedIconTint(ThemeUtils.getMainThemeColor(this))
+                .withSelectedTextTint(ThemeUtils.getMainThemeColor(this))
+        }
     }
 
     //动态加载FrpcLib

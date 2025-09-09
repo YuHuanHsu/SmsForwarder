@@ -128,13 +128,19 @@ class HttpServerUtils private constructor() {
             }
         }
 
-        //判断版本是否一致
-        @Throws(HttpException::class)
-        fun compareVersion(cloneInfo: CloneInfo) {
+        //判断版本是否一致，顯示提示但允許繼續
+        fun compareVersion(cloneInfo: CloneInfo): Boolean {
             val versionCodeRequest = cloneInfo.versionCode
-            if (versionCodeRequest == 0) throw HttpException(500, getString(R.string.version_code_required))
+            if (versionCodeRequest == 0) {
+                XToastUtils.warning(getString(R.string.version_code_required))
+                return false
+            }
             val versionCodeLocal = AppUtils.getAppVersionCode().toString().substring(1)
-            if (!versionCodeRequest.toString().endsWith(versionCodeLocal)) throw HttpException(500, getString(R.string.inconsistent_version))
+            if (!versionCodeRequest.toString().endsWith(versionCodeLocal)) {
+                XToastUtils.warning("${getString(R.string.inconsistent_version)}，建議謹慎匯入")
+                return false
+            }
+            return true
         }
 
         //导出设置
@@ -145,7 +151,6 @@ class HttpServerUtils private constructor() {
             cloneInfo.settings = SharedPreference.exportPreference()
             cloneInfo.senderList = Core.sender.getAllNonCache()
             cloneInfo.ruleList = Core.rule.getAllNonCache()
-            cloneInfo.frpcList = Core.frpc.getAllNonCache()
             cloneInfo.taskList = Core.task.getAllNonCache()
             return cloneInfo
         }
@@ -183,13 +188,6 @@ class HttpServerUtils private constructor() {
                 if (!cloneInfo.ruleList.isNullOrEmpty()) {
                     for (rule in cloneInfo.ruleList!!) {
                         Core.rule.insert(rule)
-                    }
-                }
-                //Frpc配置
-                Core.frpc.deleteAll()
-                if (!cloneInfo.frpcList.isNullOrEmpty()) {
-                    for (frpc in cloneInfo.frpcList!!) {
-                        Core.frpc.insert(frpc)
                     }
                 }
                 //Task配置

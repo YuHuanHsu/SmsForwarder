@@ -14,7 +14,6 @@ import com.idormy.sms.forwarder.service.HttpServerService
 import com.xuexiang.xrouter.utils.TextUtils
 import com.xuexiang.xutil.XUtil
 import com.xuexiang.xutil.system.DeviceUtils
-import frpclib.Frpclib
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
@@ -41,41 +40,6 @@ class SmsCommandUtils {
             val action = cmdList[1]
             val param = if (cmdList.count() > 2) cmdList[2] else ""
             when (function) {
-                "frpc" -> {
-                    if (!App.FrpclibInited) {
-                        Log.d(TAG, "还未下载Frpc库")
-                        return false
-                    }
-
-                    GlobalScope.async(Dispatchers.IO) {
-                        val frpcList = if (param.isEmpty()) {
-                            Core.frpc.getAutorun()
-                        } else {
-                            val uids = param.split(",")
-                            Core.frpc.getByUids(uids, param)
-                        }
-
-                        if (frpcList.isEmpty()) {
-                            Log.d(TAG, "没有需要操作的Frpc")
-                            return@async
-                        }
-
-                        for (frpc in frpcList) {
-                            if (action == "start") {
-                                if (!Frpclib.isRunning(frpc.uid)) {
-                                    val error = Frpclib.runContent(frpc.uid, frpc.config)
-                                    if (!TextUtils.isEmpty(error)) {
-                                        Log.e(TAG, error)
-                                    }
-                                }
-                            } else if (action == "stop") {
-                                if (Frpclib.isRunning(frpc.uid)) {
-                                    Frpclib.close(frpc.uid)
-                                }
-                            }
-                        }
-                    }
-                }
 
                 "httpserver" -> {
                     Intent(context, HttpServerService::class.java).also {

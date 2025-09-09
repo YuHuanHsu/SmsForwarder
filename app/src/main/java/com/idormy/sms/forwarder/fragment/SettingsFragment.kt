@@ -54,6 +54,7 @@ import com.idormy.sms.forwarder.utils.AppUtils.getAppPackageName
 import com.idormy.sms.forwarder.utils.BackupUtils
 import com.idormy.sms.forwarder.utils.BluetoothUtils
 import com.idormy.sms.forwarder.utils.CommonUtils
+import com.xuexiang.xutil.app.AppUtils
 import com.idormy.sms.forwarder.utils.DataProvider
 import com.idormy.sms.forwarder.utils.EVENT_LOAD_APP_LIST
 import com.idormy.sms.forwarder.utils.EXTRA_UPDATE_NOTIFICATION
@@ -226,8 +227,7 @@ class SettingsFragment : BaseFragment<FragmentSettingsBinding?>(), View.OnClickL
         binding!!.btnExtraSim1.setOnClickListener(this)
         binding!!.btnExtraSim2.setOnClickListener(this)
         binding!!.btnExportLog.setOnClickListener(this)
-        binding!!.btnExportSettings.setOnClickListener(this)
-        binding!!.btnImportSettings.setOnClickListener(this)
+        binding!!.btnBackupPage.setOnClickListener(this)
 
         //监听已安装App信息列表加载完成事件
         LiveEventBus.get(EVENT_LOAD_APP_LIST, String::class.java).observeStickyForever(appListObserver)
@@ -304,6 +304,10 @@ class SettingsFragment : BaseFragment<FragmentSettingsBinding?>(), View.OnClickL
                 return
             }
 
+            R.id.btn_backup_page -> {
+                openPage(BackupFragment::class.java)
+            }
+
             R.id.btn_export_log -> {
                 XXPermissions.with(this)
                     // 申请储存权限
@@ -338,45 +342,6 @@ class SettingsFragment : BaseFragment<FragmentSettingsBinding?>(), View.OnClickL
                 return
             }
 
-            R.id.btn_export_settings -> {
-                XXPermissions.with(this)
-                    .permission(Permission.MANAGE_EXTERNAL_STORAGE)
-                    .request(object : OnPermissionCallback {
-                        override fun onGranted(permissions: List<String>, all: Boolean) {
-                            showExportCategoryDialog()
-                        }
-
-                        override fun onDenied(permissions: List<String>, never: Boolean) {
-                            if (never) {
-                                XToastUtils.error(R.string.toast_denied_never)
-                                XXPermissions.startPermissionActivity(requireContext(), permissions)
-                            } else {
-                                XToastUtils.error(R.string.toast_denied)
-                            }
-                        }
-                    })
-                return
-            }
-
-            R.id.btn_import_settings -> {
-                XXPermissions.with(this)
-                    .permission(Permission.MANAGE_EXTERNAL_STORAGE)
-                    .request(object : OnPermissionCallback {
-                        override fun onGranted(permissions: List<String>, all: Boolean) {
-                            showImportFileDialog()
-                        }
-
-                        override fun onDenied(permissions: List<String>, never: Boolean) {
-                            if (never) {
-                                XToastUtils.error(R.string.toast_denied_never)
-                                XXPermissions.startPermissionActivity(requireContext(), permissions)
-                            } else {
-                                XToastUtils.error(R.string.toast_denied)
-                            }
-                        }
-                    })
-                return
-            }
 
             else -> {}
         }
@@ -1501,7 +1466,23 @@ class SettingsFragment : BaseFragment<FragmentSettingsBinding?>(), View.OnClickL
                 .items(*fileInfos)
                 .itemsCallback { _, _, which, _ ->
                     val selectedFile = backupFiles[which]
-                    showImportConfirmDialog(selectedFile.absolutePath)
+                    val backupInfo = BackupUtils.getBackupInfoFromFile(selectedFile.absolutePath)
+                    val currentVersion = AppUtils.getAppVersionName()
+
+                    if (backupInfo != null && backupInfo.versionName != currentVersion) {
+                        val content = "備份檔案版本 (${backupInfo.versionName}) 與當前應用版本 ($currentVersion) 不一致，直接匯入可能會導致錯誤，是否要繼續？"
+                        MaterialDialog.Builder(requireContext())
+                            .title("版本不一致警告")
+                            .content(content)
+                            .positiveText("繼續匯入")
+                            .onPositive { _, _ ->
+                                showImportConfirmDialog(selectedFile.absolutePath)
+                            }
+                            .negativeText(android.R.string.cancel)
+                            .show()
+                    } else {
+                        showImportConfirmDialog(selectedFile.absolutePath)
+                    }
                 }
                 .negativeText(android.R.string.cancel)
                 .show()
